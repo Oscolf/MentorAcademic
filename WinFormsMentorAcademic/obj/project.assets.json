@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\WinFormsMentorAcademic\\WinFormsMentorAcademic.csproj",
+      "projectUniqueName": "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\WinFormsMentorAcademic\\WinFormsMentorAcademic.csproj",
       "projectName": "WinFormsMentorAcademic",
-      "projectPath": "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\WinFormsMentorAcademic\\WinFormsMentorAcademic.csproj",
+      "projectPath": "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\WinFormsMentorAcademic\\WinFormsMentorAcademic.csproj",
       "packagesPath": "C:\\Users\\zndro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\WinFormsMentorAcademic\\obj\\",
+      "outputPath": "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\WinFormsMentorAcademic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

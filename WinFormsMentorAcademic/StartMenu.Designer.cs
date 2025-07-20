@@ -53,11 +53,11 @@ partial class StartMenu
         // 
         lbl_Novedades.AutoSize = true;
         lbl_Novedades.BackColor = System.Drawing.Color.Transparent;
-        lbl_Novedades.Font = new System.Drawing.Font("Segoe UI", 36F, ((System.Drawing.FontStyle)(System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)), System.Drawing.GraphicsUnit.Point, ((byte)0));
+        lbl_Novedades.Font = new System.Drawing.Font("Segoe UI Black", 36F, ((System.Drawing.FontStyle)(System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)), System.Drawing.GraphicsUnit.Point, ((byte)0));
         lbl_Novedades.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
         lbl_Novedades.Location = new System.Drawing.Point(25, 28);
         lbl_Novedades.Name = "lbl_Novedades";
-        lbl_Novedades.Size = new System.Drawing.Size(609, 96);
+        lbl_Novedades.Size = new System.Drawing.Size(640, 96);
         lbl_Novedades.TabIndex = 0;
         lbl_Novedades.Text = "MentorAcademic";
         // 
@@ -68,7 +68,7 @@ partial class StartMenu
         grBx_RedesSociales.Controls.Add(btn_instagram);
         grBx_RedesSociales.Controls.Add(btn_facebook);
         grBx_RedesSociales.Controls.Add(vScBr_redesSociales);
-        grBx_RedesSociales.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        grBx_RedesSociales.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         grBx_RedesSociales.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
         grBx_RedesSociales.Location = new System.Drawing.Point(35, 187);
         grBx_RedesSociales.Name = "grBx_RedesSociales";
@@ -135,9 +135,9 @@ partial class StartMenu
         btn_login.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
         btn_login.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btn_login.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
-        btn_login.Location = new System.Drawing.Point(998, 28);
+        btn_login.Location = new System.Drawing.Point(949, 28);
         btn_login.Name = "btn_login";
-        btn_login.Size = new System.Drawing.Size(214, 53);
+        btn_login.Size = new System.Drawing.Size(261, 69);
         btn_login.TabIndex = 2;
         btn_login.Text = "Ingresar";
         btn_login.UseVisualStyleBackColor = false;
@@ -146,7 +146,7 @@ partial class StartMenu
         // gBx_noticiasComunicados
         // 
         gBx_noticiasComunicados.Controls.Add(tbCtrl_noticiasOcomunicados);
-        gBx_noticiasComunicados.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        gBx_noticiasComunicados.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         gBx_noticiasComunicados.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
         gBx_noticiasComunicados.Location = new System.Drawing.Point(626, 187);
         gBx_noticiasComunicados.Name = "gBx_noticiasComunicados";
@@ -165,16 +165,15 @@ partial class StartMenu
         tbCtrl_noticiasOcomunicados.Name = "tbCtrl_noticiasOcomunicados";
         tbCtrl_noticiasOcomunicados.SelectedIndex = 0;
         tbCtrl_noticiasOcomunicados.Size = new System.Drawing.Size(581, 514);
-        tbCtrl_noticiasOcomunicados.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
         tbCtrl_noticiasOcomunicados.TabIndex = 0;
         // 
         // tbPg_noticias
         // 
         tbPg_noticias.BackColor = System.Drawing.Color.FromArgb(((int)((byte)142)), ((int)((byte)182)), ((int)((byte)155)));
-        tbPg_noticias.Location = new System.Drawing.Point(4, 54);
+        tbPg_noticias.Location = new System.Drawing.Point(4, 41);
         tbPg_noticias.Name = "tbPg_noticias";
         tbPg_noticias.Padding = new System.Windows.Forms.Padding(3);
-        tbPg_noticias.Size = new System.Drawing.Size(573, 456);
+        tbPg_noticias.Size = new System.Drawing.Size(573, 469);
         tbPg_noticias.TabIndex = 0;
         tbPg_noticias.Text = "Noticias";
         // 
@@ -190,13 +189,12 @@ partial class StartMenu
         // 
         // btn_signup
         // 
-        btn_signup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
         btn_signup.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
         btn_signup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btn_signup.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
-        btn_signup.Location = new System.Drawing.Point(998, 87);
+        btn_signup.Location = new System.Drawing.Point(949, 103);
         btn_signup.Name = "btn_signup";
-        btn_signup.Size = new System.Drawing.Size(214, 53);
+        btn_signup.Size = new System.Drawing.Size(261, 69);
         btn_signup.TabIndex = 5;
         btn_signup.Text = "Registrarse";
         btn_signup.UseVisualStyleBackColor = false;
@@ -207,13 +205,13 @@ partial class StartMenu
         AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.FromArgb(((int)((byte)35)), ((int)((byte)83)), ((int)((byte)71)));
-        ClientSize = new System.Drawing.Size(1256, 770);
+        ClientSize = new System.Drawing.Size(1256, 771);
         Controls.Add(btn_signup);
         Controls.Add(grBx_RedesSociales);
         Controls.Add(gBx_noticiasComunicados);
         Controls.Add(btn_login);
         Controls.Add(lbl_Novedades);
-        Text = "StartMenu";
+        Text = "Bienvenida";
         grBx_RedesSociales.ResumeLayout(false);
         gBx_noticiasComunicados.ResumeLayout(false);
         tbCtrl_noticiasOcomunicados.ResumeLayout(false);

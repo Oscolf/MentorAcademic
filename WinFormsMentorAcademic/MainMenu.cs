@@ -27,6 +27,9 @@ public partial class MainMenu : Form
         btn_asesorias.Visible = false;
         btn_clubes.Visible = false;
 
+        label1.Visible = false;
+        label2.Visible = false;
+
         btn_culturales.Visible = true; btn_culturales.Enabled = true;
         btn_deportivos.Visible = true; btn_deportivos.Enabled = true;
 
