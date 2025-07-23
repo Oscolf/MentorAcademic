@@ -7,7 +7,7 @@ public partial class MainMenu : Form
         InitializeComponent();
         lbl_name.Text += userName;
         lbl_usr.Text += userMatricula;
-        lbl_welcome.Text = $"¡Bienvenid@ {userName}! \n Seleccione el servicio que desea utilizar";
+        lbl_welcome.Text = $"Bienvenid@ {userName} \n Seleccione el servicio que desea utilizar";
     }
 
     private void btn_signout_Click(object sender, EventArgs e)
@@ -26,6 +26,9 @@ public partial class MainMenu : Form
     {
         btn_asesorias.Visible = false;
         btn_clubes.Visible = false;
+
+        label1.Visible = false;
+        label2.Visible = false;
 
         btn_culturales.Visible = true; btn_culturales.Enabled = true;
         btn_deportivos.Visible = true; btn_deportivos.Enabled = true;

@@ -7,8 +7,28 @@
   "targets": {
     ".NETCoreApp,Version=v9.0": {
       "WinFormsMentorAcademic/1.0.0": {
+        "dependencies": {
+          "SQLqueries": "1.0.0",
+          "MySql.Data": "9.3.0.0"
+        },
         "runtime": {
           "WinFormsMentorAcademic.dll": {}
+        }
+      },
+      "SQLqueries/1.0.0": {
+        "runtime": {
+          "SQLqueries.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MySql.Data/9.3.0.0": {
+        "runtime": {
+          "MySql.Data.dll": {
+            "assemblyVersion": "9.3.0.0",
+            "fileVersion": "9.3.0.0"
+          }
         }
       }
     }
@@ -16,6 +36,16 @@
   "libraries": {
     "WinFormsMentorAcademic/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SQLqueries/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MySql.Data/9.3.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

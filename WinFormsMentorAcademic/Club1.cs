@@ -11,4 +11,9 @@ public partial class Club1 : Form
         ConfirmacionClubes confirmacion = new ConfirmacionClubes();
         confirmacion.Show();
     }
+
+    private void btn_regresar_Click(object sender, EventArgs e)
+    {
+        this.Close();
+    }
 }

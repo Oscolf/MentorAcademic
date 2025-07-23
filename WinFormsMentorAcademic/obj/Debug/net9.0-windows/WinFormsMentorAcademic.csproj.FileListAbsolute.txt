@@ -16,3 +16,28 @@ C:\Users\zndro\RiderProjects\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net
 C:\Users\zndro\RiderProjects\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.pdb
 C:\Users\zndro\RiderProjects\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.genruntimeconfig.cache
 C:\Users\zndro\RiderProjects\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\ref\WinFormsMentorAcademic.dll
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\bin\Debug\net9.0-windows\WinFormsMentorAcademic.exe
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\bin\Debug\net9.0-windows\WinFormsMentorAcademic.deps.json
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\bin\Debug\net9.0-windows\WinFormsMentorAcademic.runtimeconfig.json
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\bin\Debug\net9.0-windows\WinFormsMentorAcademic.dll
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\bin\Debug\net9.0-windows\WinFormsMentorAcademic.pdb
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.Club1.resources
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.Club2.resources
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.Fondos.resources
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.csproj.GenerateResource.cache
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.AssemblyInfoInputs.cache
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.AssemblyInfo.cs
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.csproj.CoreCompileInputs.cache
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.sourcelink.json
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.dll
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\refint\WinFormsMentorAcademic.dll
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.pdb
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.genruntimeconfig.cache
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\ref\WinFormsMentorAcademic.dll
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\bin\Debug\net9.0-windows\MySql.Data.dll
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\bin\Debug\net9.0-windows\SQLqueries.dll
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\bin\Debug\net9.0-windows\SQLqueries.pdb
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\bin\Debug\net9.0-windows\MySql.Data.xml
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.csproj.AssemblyReference.cache
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinForms.E73EC746.Up2Date

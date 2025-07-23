@@ -31,10 +31,12 @@ partial class ConfirmacionClubes
     {
         lbl_clubSelec = new System.Windows.Forms.Label();
         label2 = new System.Windows.Forms.Label();
-        button1 = new System.Windows.Forms.Button();
-        button2 = new System.Windows.Forms.Button();
-        button3 = new System.Windows.Forms.Button();
-        button4 = new System.Windows.Forms.Button();
+        btn_regresar = new System.Windows.Forms.Button();
+        btn_send = new System.Windows.Forms.Button();
+        tBz_ssn = new System.Windows.Forms.TextBox();
+        tBx_cellphoneNum = new System.Windows.Forms.TextBox();
+        label1 = new System.Windows.Forms.Label();
+        label3 = new System.Windows.Forms.Label();
         SuspendLayout();
         // 
         // lbl_clubSelec
@@ -59,78 +61,102 @@ partial class ConfirmacionClubes
         label2.TabIndex = 1;
         label2.Text = "Rectifica si los datos que elegiste son correctos";
         // 
-        // button1
+        // btn_regresar
         // 
-        button1.BackColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
-        button1.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
-        button1.ImageKey = "(ninguna)";
-        button1.Location = new System.Drawing.Point(141, 199);
-        button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(308, 136);
-        button1.TabIndex = 2;
-        button1.Text = "NSS";
-        button1.UseVisualStyleBackColor = false;
+        btn_regresar.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
+        btn_regresar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+        btn_regresar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btn_regresar.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
+        btn_regresar.Location = new System.Drawing.Point(12, 509);
+        btn_regresar.Name = "btn_regresar";
+        btn_regresar.Size = new System.Drawing.Size(158, 62);
+        btn_regresar.TabIndex = 3;
+        btn_regresar.Text = "Regresar";
+        btn_regresar.UseVisualStyleBackColor = false;
         // 
-        // button2
+        // btn_send
         // 
-        button2.BackColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
-        button2.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
-        button2.Location = new System.Drawing.Point(502, 199);
-        button2.Name = "button2";
-        button2.Size = new System.Drawing.Size(308, 136);
-        button2.TabIndex = 3;
-        button2.Text = "Numero celular";
-        button2.UseVisualStyleBackColor = false;
+        btn_send.BackColor = System.Drawing.Color.FromArgb(((int)((byte)142)), ((int)((byte)182)), ((int)((byte)155)));
+        btn_send.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btn_send.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
+        btn_send.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+        btn_send.Location = new System.Drawing.Point(284, 378);
+        btn_send.Name = "btn_send";
+        btn_send.Size = new System.Drawing.Size(374, 83);
+        btn_send.TabIndex = 2;
+        btn_send.Text = "Enviar";
+        btn_send.UseVisualStyleBackColor = false;
         // 
-        // button3
+        // tBz_ssn
         // 
-        button3.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
-        button3.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
-        button3.Location = new System.Drawing.Point(27, 515);
-        button3.Name = "button3";
-        button3.Size = new System.Drawing.Size(119, 50);
-        button3.TabIndex = 4;
-        button3.Text = "Volver";
-        button3.UseVisualStyleBackColor = false;
+        tBz_ssn.AcceptsReturn = true;
+        tBz_ssn.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
+        tBz_ssn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        tBz_ssn.Location = new System.Drawing.Point(394, 190);
+        tBz_ssn.Name = "tBz_ssn";
+        tBz_ssn.Size = new System.Drawing.Size(345, 50);
+        tBz_ssn.TabIndex = 0;
         // 
-        // button4
+        // tBx_cellphoneNum
         // 
-        button4.BackColor = System.Drawing.Color.FromArgb(((int)((byte)142)), ((int)((byte)182)), ((int)((byte)155)));
-        button4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button4.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
-        button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-        button4.Location = new System.Drawing.Point(284, 378);
-        button4.Name = "button4";
-        button4.Size = new System.Drawing.Size(374, 83);
-        button4.TabIndex = 5;
-        button4.Text = "Enviar";
-        button4.UseVisualStyleBackColor = false;
+        tBx_cellphoneNum.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
+        tBx_cellphoneNum.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        tBx_cellphoneNum.Location = new System.Drawing.Point(394, 280);
+        tBx_cellphoneNum.Name = "tBx_cellphoneNum";
+        tBx_cellphoneNum.Size = new System.Drawing.Size(344, 50);
+        tBx_cellphoneNum.TabIndex = 1;
+        // 
+        // label1
+        // 
+        label1.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label1.Location = new System.Drawing.Point(124, 190);
+        label1.Name = "label1";
+        label1.Size = new System.Drawing.Size(264, 75);
+        label1.TabIndex = 4;
+        label1.Text = "Número de seguridad social (NSS):";
+        // 
+        // label3
+        // 
+        label3.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label3.Location = new System.Drawing.Point(124, 265);
+        label3.Name = "label3";
+        label3.Size = new System.Drawing.Size(264, 75);
+        label3.TabIndex = 5;
+        label3.Text = "Número de teléfono celular:";
         // 
         // ConfirmacionClubes
         // 
+        AcceptButton = btn_send;
         AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.FromArgb(((int)((byte)35)), ((int)((byte)83)), ((int)((byte)71)));
+        CancelButton = btn_regresar;
         ClientSize = new System.Drawing.Size(941, 583);
-        Controls.Add(button4);
-        Controls.Add(button3);
-        Controls.Add(button2);
-        Controls.Add(button1);
+        Controls.Add(label3);
+        Controls.Add(label1);
+        Controls.Add(tBx_cellphoneNum);
+        Controls.Add(tBz_ssn);
+        Controls.Add(btn_send);
+        Controls.Add(btn_regresar);
         Controls.Add(label2);
         Controls.Add(lbl_clubSelec);
+        ForeColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
         Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-        Text = "Verifica tus datos";
+        Text = "Confirmar Club";
         TransparencyKey = System.Drawing.Color.White;
         ResumeLayout(false);
         PerformLayout();
     }
 
-    private System.Windows.Forms.Button button3;
-    private System.Windows.Forms.Button button4;
+    private System.Windows.Forms.Label label3;
 
-    private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.Label label1;
 
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.TextBox tBz_ssn;
+    private System.Windows.Forms.TextBox tBx_cellphoneNum;
+
+    private System.Windows.Forms.Button btn_regresar;
+    private System.Windows.Forms.Button btn_send;
 
     private System.Windows.Forms.Label label2;
 

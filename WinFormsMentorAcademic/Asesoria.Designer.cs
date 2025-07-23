@@ -47,6 +47,7 @@ partial class Asesoria
         // btn_exit
         // 
         btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
+        btn_exit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
         btn_exit.Location = new System.Drawing.Point(110, 170);
         btn_exit.Name = "btn_exit";
         btn_exit.Size = new System.Drawing.Size(166, 39);
@@ -161,13 +162,15 @@ partial class Asesoria
         // 
         // Asesoria
         // 
+        AcceptButton = btn_reservar;
         AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.FromArgb(((int)((byte)35)), ((int)((byte)83)), ((int)((byte)71)));
+        CancelButton = btn_exit;
         ClientSize = new System.Drawing.Size(1326, 818);
         Controls.Add(grBx_userInfo);
         Controls.Add(grBx_Course);
-        Text = "Asesorías MentorAcademic";
+        Text = "Genera tu asesoría";
         grBx_Course.ResumeLayout(false);
         grBx_userInfo.ResumeLayout(false);
         ResumeLayout(false);

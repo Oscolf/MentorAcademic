@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WinFormsMentorAcademic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a6aaa2fe73298534b8dd9e482d952aa52d1e043")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53fd2474a4269f1a2952361811db92702a731164")]
 [assembly: System.Reflection.AssemblyProductAttribute("WinFormsMentorAcademic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WinFormsMentorAcademic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
