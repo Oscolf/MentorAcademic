@@ -1,5 +1,15 @@
 .vs/
 .idea/
+
 MentorAcademic.sln.DotSettings.user
 WindowsFormsMentorAcademic/bin/
 WindowsFormsMentorAcademic/obj/
+WindowsFormsMentorAcademic/config/
+WindowsFormsMentorAcademic/WindowsFormsMentorAcademic.csproj.user
+WindowsFormsMentorAcademic/windowsformsmentoracademic.csproj
+
+SQLqueries/bin/
+SQLqueries/obj/
+SQLqueries/config/
+SQLqueries/SQLqueries.csproj.user
+SQLqueries/sqlqueries.csproj
