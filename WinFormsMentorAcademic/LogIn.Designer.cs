@@ -31,7 +31,7 @@ partial class LogIn
     {
         lbl_email = new System.Windows.Forms.Label();
         lbl_password = new System.Windows.Forms.Label();
-        txB_matricula = new System.Windows.Forms.TextBox();
+        tBx_correo = new System.Windows.Forms.TextBox();
         txB_password = new System.Windows.Forms.TextBox();
         btn_login = new System.Windows.Forms.Button();
         lbl_noAcc = new System.Windows.Forms.Label();
@@ -62,18 +62,18 @@ partial class LogIn
         lbl_password.Text = "Contraseña:";
         lbl_password.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
         // 
-        // txB_matricula
+        // tBx_correo
         // 
-        txB_matricula.BackColor = System.Drawing.Color.FromArgb(((int)((byte)142)), ((int)((byte)182)), ((int)((byte)155)));
-        txB_matricula.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txB_matricula.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
-        txB_matricula.Location = new System.Drawing.Point(401, 230);
-        txB_matricula.Name = "txB_matricula";
-        txB_matricula.Size = new System.Drawing.Size(273, 39);
-        txB_matricula.TabIndex = 2;
-        txB_matricula.Text = "ejemplo@email.com";
-        txB_matricula.Click += txB_matricula_clicked;
-        txB_matricula.TextChanged += txBx_TextChanged;
+        tBx_correo.BackColor = System.Drawing.Color.FromArgb(((int)((byte)142)), ((int)((byte)182)), ((int)((byte)155)));
+        tBx_correo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        tBx_correo.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
+        tBx_correo.Location = new System.Drawing.Point(401, 230);
+        tBx_correo.Name = "tBx_correo";
+        tBx_correo.Size = new System.Drawing.Size(273, 39);
+        tBx_correo.TabIndex = 2;
+        tBx_correo.Text = "ejemplo@email.com";
+        tBx_correo.Click += txB_matricula_clicked;
+        tBx_correo.TextChanged += txBx_TextChanged;
         // 
         // txB_password
         // 
@@ -167,7 +167,7 @@ partial class LogIn
         Controls.Add(lbl_noAcc);
         Controls.Add(btn_login);
         Controls.Add(txB_password);
-        Controls.Add(txB_matricula);
+        Controls.Add(tBx_correo);
         Controls.Add(lbl_password);
         Controls.Add(lbl_email);
         MaximizeBox = false;
@@ -188,7 +188,7 @@ partial class LogIn
 
     private System.Windows.Forms.Label lbl_email;
     private System.Windows.Forms.Label lbl_password;
-    private System.Windows.Forms.TextBox txB_matricula;
+    private System.Windows.Forms.TextBox tBx_correo;
     private System.Windows.Forms.TextBox txB_password;
     #endregion
 }

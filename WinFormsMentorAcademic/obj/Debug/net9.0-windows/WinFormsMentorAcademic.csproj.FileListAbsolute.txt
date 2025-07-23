@@ -35,3 +35,9 @@ C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcade
 C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.pdb
 C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.genruntimeconfig.cache
 C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\ref\WinFormsMentorAcademic.dll
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\bin\Debug\net9.0-windows\MySql.Data.dll
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\bin\Debug\net9.0-windows\SQLqueries.dll
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\bin\Debug\net9.0-windows\SQLqueries.pdb
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\bin\Debug\net9.0-windows\MySql.Data.xml
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.csproj.AssemblyReference.cache
+C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinForms.E73EC746.Up2Date
