@@ -21,35 +21,33 @@ public class SqlQueries
     {
         ConnectionString = connection;
     }
-    
-    public MySqlConnection GetConnection()
+    private MySqlCommand Get_Command(string commandText)
+    {
+        MySqlCommand cmd = new MySqlCommand(commandText, Get_Connection());
+        return cmd;
+    }
+    public MySqlConnection Get_Connection()
     {
         MySqlConnection connect = new MySqlConnection(_connectionString);
         connect.Open();
         return connect;
     }
 
-    public MySqlCommand GetCommand(string commandText)
+    public void GetCommand_and_ExecuteNonQuery(string commandText)
     {
-        MySqlCommand cmd = new MySqlCommand(commandText, GetConnection());
-        return cmd;
-    }
-    
-    public void ExecuteNonQuery(string commandText)
-    {
-        MySqlCommand cmd = GetCommand(commandText);
+        MySqlCommand cmd = Get_Command(commandText);
         cmd.ExecuteNonQuery();
     }
     
     public MySqlDataReader ExecuteReader(string commandText)
     {
-        MySqlCommand cmd = GetCommand(commandText);
+        MySqlCommand cmd = Get_Command(commandText);
         return cmd.ExecuteReader();
     }
     
-    public DataTable ExecuteDataTable(string commandText)
+    public DataTable Execute_Data_Table(string commandText)
     {
-        MySqlCommand cmd = GetCommand(commandText);
+        MySqlCommand cmd = Get_Command(commandText);
         MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
         DataTable dataTable = new DataTable();
         adapter.Fill(dataTable);

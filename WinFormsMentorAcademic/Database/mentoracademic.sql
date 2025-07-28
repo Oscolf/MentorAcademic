@@ -31,7 +31,7 @@ nombre varchar(50) NOT NULL,
 apellido varchar(50) NOT NULL,
 email varchar(100) NOT NULL UNIQUE,
 contasena varchar(100) NOT NULL,
-fecha_nacimiento date NOT NULL,
+nss int DEFAULT NULL,
 club_pertenece int DEFAULT NULL
 );
 
@@ -40,7 +40,8 @@ idAsesoria int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 idAlumno int NOT NULL,
 idProfesor int NOT NULL,
 fecha date NOT NULL,
-hora time NOT NULL
+hora time NOT NULL,
+estado enum('Pendiente', 'Confirmada', 'Cancelada') NOT NULL DEFAULT 'Pendiente'
 );
 
 CREATE TABLE encargadosclubes (

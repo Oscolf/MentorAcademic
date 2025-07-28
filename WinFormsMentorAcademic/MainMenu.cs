@@ -2,12 +2,12 @@
 public partial class MainMenu : Form
 
 {
-    public MainMenu(string userMatricula, string userName)
+    public MainMenu(User user)
     {
         InitializeComponent();
-        lbl_name.Text += userName;
-        lbl_usr.Text += userMatricula;
-        lbl_welcome.Text = $"Bienvenid@ {userName} \n Seleccione el servicio que desea utilizar";
+        lbl_name.Text += user.NombreCompleto;
+        lbl_usr.Text += user.Matricula;
+        lbl_welcome.Text = $"Bienvenid@ {user.NombreCompleto} \n Seleccione el servicio que desea utilizar";
     }
 
     private void btn_signout_Click(object sender, EventArgs e)

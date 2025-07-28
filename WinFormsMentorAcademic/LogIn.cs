@@ -8,18 +8,21 @@ public partial class LogIn : Form
     public LogIn()
     {
         InitializeComponent();
+        
     }
+    
     private void btn_login_Click(object sender, EventArgs e)
     {
-        //Realizar una consulta a la base de datos para verificar las credenciales
-        SqlQueries ConsultUser =  new SqlQueries("server=localhost;" +
-                                                 "host=3306" +
-                                                 "database=mentoracademic;" +
-                                                 "uid=root");
-        string cmd = $"SELECT * FROM alumnos WHERE email = {tBx_correo.Text} AND contrasena = {txB_password.Text};";
-        
-        MySqlDataReader reader = ConsultUser.ExecuteReader(cmd);
-        
+        User user = new User();
+        user.Email = tBx_correo.Text; 
+        user.Password = txB_password.Text;
+
+        if (user.ValidateLogin())
+        {
+            MainMenu MenuPrincipal = new MainMenu(user);
+            MenuPrincipal.Show();
+            this.Hide();
+        }
     }
     private void txB_matricula_clicked(object sender, EventArgs e)
     {

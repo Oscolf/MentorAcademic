@@ -1,5 +1,7 @@
-﻿namespace WinFormsMentorAcademic;
+﻿using SQLqueries;
+using MySql.Data.MySqlClient;
 
+namespace WinFormsMentorAcademic;
 public class User 
 {
     private string _idUser;
@@ -9,15 +11,7 @@ public class User
     private string _lastName;
     private string _fullName;
     
-    public User()
-    {
-        _idUser = "placeholder";
-        _password = "placeholder";
-        _email = "placeholder";
-        _firstName = "placeholder";
-        _lastName = "placeholder";
-        _fullName = "placeholder";
-    }
+    public User() { }
 
     public User(string nombre, string apellido, string email, string password)
     {
@@ -26,7 +20,6 @@ public class User
         Email = email;
         Password = password;
         Matricula = email;
-        NombreCompleto = ValidateNaNFullName();
     }
 
     public string Email
@@ -54,7 +47,7 @@ public class User
         set
         {
             string matr = "";
-            for (int i = 0; i <= value.Length - 1; i++)
+            for (int i = 0; i <= _email.Length - 1; i++)
             {
                 if (value[i] == '@')
                     break;    
@@ -75,6 +68,7 @@ public class User
             }
             else
                 _firstName = value;
+            NombreCompleto = ValidateNaNFullName();
         }
     }
     public string Apellido
@@ -89,6 +83,7 @@ public class User
             }
             else
                 _lastName = value;
+            NombreCompleto = ValidateNaNFullName();
         }
     }
     public  string NombreCompleto
@@ -113,36 +108,65 @@ public class User
     
     public bool ValidateSignUp()
     {
-        bool verify = true;
-  
         if (_fullName == "INVALID")
         {
             MessageBox.Show("El nombre y/o apellido no pueden contener números");
-            verify = false;
+            return false;
         }
         if (_password == "INVALID")
         {
             MessageBox.Show("La contraseña debe de tener por lo menos 6 caracteres");
-            verify = false;
+            return false;
         }
 
         if (_email == "INVALID")
         {
             MessageBox.Show("El correo debe de tener un formato válido");
-            verify = false;
+            return false;
         }
         
-        return verify;
+        SqlQueries signUpQueries = new SqlQueries("server=localhost;" +
+                                                  "port=3306;" +
+                                                  "database=mentoracademic;" +
+                                                  "uid=root;" +
+                                                  "sslmode=none;");
+        
+        string cmd = $"INSERT INTO alumnos (nombre, apellido, email, contasena) " +
+                     $"VALUES ('{Nombre}', '{Apellido}', '{Email}', '{Password}');";
+        
+        signUpQueries.GetCommand_and_ExecuteNonQuery(cmd);
+        return true;
     }
 
     public bool ValidateLogin()
     {
-        bool verify = true;
-
-        //Hacer una consulta a la base de datos para verificar si el usuario existe
-        //si lo encuentra, regresa true, si no, false
+        SqlQueries loginQueries =  new SqlQueries("server=127.0.0.1;" +
+                                                  "port=3306;" +
+                                                  "database=mentoracademic;" +
+                                                  "uid=root;" +
+                                                  "sslmode=none;");
         
-        return verify;
+        string cmd = $"SELECT * FROM alumnos WHERE email = '{Email}' AND contasena = '{Password}';";
+        
+        MySqlDataReader reader = loginQueries.ExecuteReader(cmd);
+        reader.Read();
+        
+        if (reader.HasRows)
+        {
+            Nombre = reader[1].ToString();
+            Apellido = reader[2].ToString();
+            Password = reader[4].ToString();
+            Matricula = reader[3].ToString();
+            MessageBox.Show($"Bienvenid@ {reader[1]}!");
+        }
+        else
+        {
+            MessageBox.Show("Usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.");
+            reader.Close();
+            loginQueries.Get_Connection().Close();
+            return false;
+        }
+        return true;
     }
     private string ValidateNaNFullName()
     {

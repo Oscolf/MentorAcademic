@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\SQLqueries\\SQLqueries.csproj": {}
+    "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\SQLqueries\\SQLqueries.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\SQLqueries\\SQLqueries.csproj": {
+    "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\SQLqueries\\SQLqueries.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\SQLqueries\\SQLqueries.csproj",
+        "projectUniqueName": "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\SQLqueries\\SQLqueries.csproj",
         "projectName": "SQLqueries",
-        "projectPath": "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\SQLqueries\\SQLqueries.csproj",
+        "projectPath": "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\SQLqueries\\SQLqueries.csproj",
         "packagesPath": "C:\\Users\\zndro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\SQLqueries\\obj\\",
+        "outputPath": "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\SQLqueries\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

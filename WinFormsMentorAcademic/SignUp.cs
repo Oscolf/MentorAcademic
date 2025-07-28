@@ -17,7 +17,7 @@ namespace WinFormsMentorAcademic
             User usuario = new User(tbx_nombre.Text, tbx_apellidos.Text, tbx_correo.Text, tbx_contraseña.Text);
             if (usuario.ValidateSignUp())
             {
-                MainMenu principal = new MainMenu(usuario.Matricula, usuario.NombreCompleto);
+                MainMenu principal = new MainMenu(usuario);
                 principal.Show();
                 this.Hide();
             }
