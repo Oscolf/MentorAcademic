@@ -16,14 +16,17 @@
       <Compile Update="StartMenu.cs">
         <SubType>Form</SubType>
       </Compile>
-      <Compile Update="Club1.cs">
-        <SubType>Form</SubType>
-      </Compile>
       <Compile Update="Fondos.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>Fondos.resx</DependentUpon>
       </Compile>
+      <Compile Remove="Club1.cs" />
+      <Compile Remove="Club1.Designer.cs" />
+      <Compile Remove="Club2.cs" />
+      <Compile Remove="Club2.Designer.cs" />
+      <Compile Remove="Asesoria.cs" />
+      <Compile Remove="Asesoria.Designer.cs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -35,6 +38,9 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>Fondos.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Remove="Club1.resx" />
+      <EmbeddedResource Remove="Club2.resx" />
+      <EmbeddedResource Remove="Asesoria.resx" />
     </ItemGroup>
 
     <ItemGroup>

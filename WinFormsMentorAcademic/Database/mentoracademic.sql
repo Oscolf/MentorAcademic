@@ -5,51 +5,61 @@ use mentoracademic;
 
 -- Crear tablas
 
-CREATE TABLE clubes (
-idClub int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-nombre varchar(100) NOT NULL,
-descripcion text DEFAULT NULL
+CREATE TABLE clubes
+(
+    idClub      int          NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre      varchar(100) NOT NULL,
+    descripcion text DEFAULT NULL
 );
 
-CREATE TABLE materias (
-idMateria int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-nombre varchar(100) NOT NULL,
-descripcion text DEFAULT NULL
+CREATE TABLE materias
+(
+    idMateria   int          NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre      varchar(100) NOT NULL,
+    descripcion text DEFAULT NULL
 );
 
-CREATE TABLE profesores (
-idProfesor int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-nombre varchar(50) NOT NULL,
-apellido varchar(50) NOT NULL,
-email varchar(100) NOT NULL UNIQUE,
-idMateria int DEFAULT NULL
+CREATE TABLE profesores
+(
+    idProfesor  int          NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre      varchar(50)  NOT NULL,
+    apellido    varchar(50)  NOT NULL,
+    email       varchar(100) NOT NULL UNIQUE,
+    hora_inicio time DEFAULT NULL,
+    hora_fin    time DEFAULT NULL,
+    idMateria   int  DEFAULT NULL
 );
 
-CREATE TABLE alumnos (
-idAlumno int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-nombre varchar(50) NOT NULL,
-apellido varchar(50) NOT NULL,
-email varchar(100) NOT NULL UNIQUE,
-contasena varchar(100) NOT NULL,
-nss int DEFAULT NULL,
-club_pertenece int DEFAULT NULL
+CREATE TABLE alumnos
+(
+    idAlumno        int          NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre          varchar(50)  NOT NULL,
+    apellido        varchar(50)  NOT NULL,
+    email           varchar(100) NOT NULL UNIQUE,
+    matricula       varchar(10)  NOT NULL UNIQUE,
+    contasena       varchar(100) NOT NULL,
+    numero_telefono int DEFAULT NULL,
+    nss             int DEFAULT NULL,
+    club_pertenece  int DEFAULT NULL
 );
 
-CREATE TABLE asesorias (
-idAsesoria int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-idAlumno int NOT NULL,
-idProfesor int NOT NULL,
-fecha date NOT NULL,
-hora time NOT NULL,
-estado enum('Pendiente', 'Confirmada', 'Cancelada') NOT NULL DEFAULT 'Pendiente'
+CREATE TABLE asesorias
+(
+    idAsesoria int                                           NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    idAlumno   int                                           NOT NULL,
+    idProfesor int                                           NOT NULL,
+    fecha      date                                          NOT NULL,
+    hora       time                                          NOT NULL,
+    estado     enum ('Pendiente', 'Confirmada', 'Cancelada') NOT NULL DEFAULT 'Pendiente'
 );
 
-CREATE TABLE encargadosclubes (
-idEncargado int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-idClub int NOT NULL,
-nombre varchar(50) NOT NULL,
-apellido varchar(50) NOT NULL,
-email varchar(100) NOT NULL UNIQUE
+CREATE TABLE encargadosclubes
+(
+    idEncargado int          NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    idClub      int          NOT NULL,
+    nombre      varchar(50)  NOT NULL,
+    apellido    varchar(50)  NOT NULL,
+    email       varchar(100) NOT NULL UNIQUE
 );
 
 -- Agregar llaves foráneas

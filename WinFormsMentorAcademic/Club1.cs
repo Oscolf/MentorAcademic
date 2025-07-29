@@ -14,7 +14,7 @@ public partial class Club1 : Form
 
     private void btn_danzaFolk_Click(object sender, EventArgs e)
     {
-        ConfirmacionClubes danzaFolk = new ConfirmacionClubes("Danza Folklórica");
+        ConfirmacionClubes danzaFolk = new ConfirmacionClubes("Danza Folklórica", userMatr);
     }
 
     private void btn_ajedrez_Click(object sender, EventArgs e)

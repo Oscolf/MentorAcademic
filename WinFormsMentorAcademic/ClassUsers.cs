@@ -131,8 +131,8 @@ public class User
                                                   "uid=root;" +
                                                   "sslmode=none;");
         
-        string cmd = $"INSERT INTO alumnos (nombre, apellido, email, contasena) " +
-                     $"VALUES ('{Nombre}', '{Apellido}', '{Email}', '{Password}');";
+        string cmd = $"INSERT INTO alumnos (nombre, apellido, email, contasena, matricula) " +
+                     $"VALUES ('{Nombre}', '{Apellido}', '{Email}', '{Password}', '{Matricula}');";
         
         signUpQueries.GetCommand_and_ExecuteNonQuery(cmd);
         return true;
@@ -149,19 +149,19 @@ public class User
         string cmd = $"SELECT * FROM alumnos WHERE email = '{Email}' AND contasena = '{Password}';";
         
         MySqlDataReader reader = loginQueries.ExecuteReader(cmd);
-        reader.Read();
         
-        if (reader.HasRows)
+        if (reader.Read())
         {
             Nombre = reader[1].ToString();
             Apellido = reader[2].ToString();
-            Password = reader[4].ToString();
             Matricula = reader[3].ToString();
+            Password = reader[4].ToString();
+            
             MessageBox.Show($"Bienvenid@ {reader[1]}!");
         }
         else
         {
-            MessageBox.Show("Usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.");
+            MessageBox.Show("Usuario o contraseña incorrectos o inexistentes. Por favor, inténtelo de nuevo.");
             reader.Close();
             loginQueries.Get_Connection().Close();
             return false;
