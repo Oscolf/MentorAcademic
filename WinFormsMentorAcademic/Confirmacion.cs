@@ -1,8 +1,16 @@
-﻿namespace WinFormsMentorAcademic;
-    public partial class Confirmacion : Form
+﻿using MySql.Data.MySqlClient;
+using SQLqueries;
+
+namespace WinFormsMentorAcademic;
+public partial class Confirmacion : Form
+{
+    public Confirmacion()
     {
-        public Confirmacion()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
+
+    private void btn_print_Click(object sender, EventArgs e)
+    {
+
+    }
+}

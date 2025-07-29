@@ -14,3 +14,19 @@ C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\SQLqueries\obj\Debu
 C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\SQLqueries\obj\Debug\net9.0\refint\SQLqueries.dll
 C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\SQLqueries\obj\Debug\net9.0\SQLqueries.pdb
 C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\SQLqueries\obj\Debug\net9.0\ref\SQLqueries.dll
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\bin\Debug\net9.0\SQLqueries.deps.json
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\bin\Debug\net9.0\SQLqueries.dll
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\bin\Debug\net9.0\SQLqueries.pdb
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\bin\Debug\net9.0\MySql.Data.dll
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\bin\Debug\net9.0\MySql.Data.xml
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\obj\Debug\net9.0\SQLqueries.csproj.AssemblyReference.cache
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\obj\Debug\net9.0\SQLqueries.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\obj\Debug\net9.0\SQLqueries.AssemblyInfoInputs.cache
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\obj\Debug\net9.0\SQLqueries.AssemblyInfo.cs
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\obj\Debug\net9.0\SQLqueries.csproj.CoreCompileInputs.cache
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\obj\Debug\net9.0\SQLqueries.sourcelink.json
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\obj\Debug\net9.0\SQLqueries.csproj.Up2Date
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\obj\Debug\net9.0\SQLqueries.dll
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\obj\Debug\net9.0\refint\SQLqueries.dll
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\obj\Debug\net9.0\SQLqueries.pdb
+C:\Users\zndro\Source\Repos\MentorAcademic\SQLqueries\obj\Debug\net9.0\ref\SQLqueries.dll

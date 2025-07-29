@@ -2,10 +2,9 @@
 .idea/
 
 MentorAcademic.sln.DotSettings.user
-
-**/bin
-**/obj
-**/config
+WindowsFormsMentorAcademic/**/bin/
+WindowsFormsMentorAcademic/**/obj/
+WindowsFormsMentorAcademic/**/config/
 
 WindowsFormsMentorAcademic/WindowsFormsMentorAcademic.csproj.user
 WindowsFormsMentorAcademic/windowsformsmentoracademic.csproj
