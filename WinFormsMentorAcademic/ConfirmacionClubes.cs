@@ -17,7 +17,9 @@ public partial class ConfirmacionClubes : Form
         SqlQueries clubesQuery = new SqlQueries("server=localhost; port=3306; " +
                                         "database=mentor_academic; user=root;");
 
-        string cmd = $"UPDATE alumnos SET club_pertenece = '{lbl_clubSel.Text}'" +
+        // FIXME: Agregar telefono
+
+        string cmd = $"UPDATE alumnos SET club_pertenece = '{lbl_clubSel.Text}', nss = '{tBz_ssn.Text}'" +
         $"WHERE matricula = '{lbl_matr.Text}';";
 
         clubesQuery.GetCommand_and_ExecuteNonQuery(cmd);
