@@ -36,13 +36,14 @@ partial class MainMenu
         btn_clubes = new System.Windows.Forms.Button();
         lbl_usr = new System.Windows.Forms.Label();
         lbl_name = new System.Windows.Forms.Label();
-        btn_history = new System.Windows.Forms.Button();
+        btn_settings = new System.Windows.Forms.Button();
         grBx_main = new System.Windows.Forms.GroupBox();
-        label2 = new System.Windows.Forms.Label();
-        label1 = new System.Windows.Forms.Label();
+        toolStrip1 = new System.Windows.Forms.ToolStrip();
         btn_culturales = new System.Windows.Forms.Button();
         btn_deportivos = new System.Windows.Forms.Button();
         lbl_welcome = new System.Windows.Forms.Label();
+        label1 = new System.Windows.Forms.Label();
+        label2 = new System.Windows.Forms.Label();
         gbx_userInfo = new System.Windows.Forms.GroupBox();
         grBx_main.SuspendLayout();
         gbx_userInfo.SuspendLayout();
@@ -65,7 +66,7 @@ partial class MainMenu
         // 
         btn_asesorias.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
         btn_asesorias.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btn_asesorias.Location = new System.Drawing.Point(41, 176);
+        btn_asesorias.Location = new System.Drawing.Point(50, 260);
         btn_asesorias.Name = "btn_asesorias";
         btn_asesorias.Size = new System.Drawing.Size(550, 660);
         btn_asesorias.TabIndex = 3;
@@ -78,7 +79,7 @@ partial class MainMenu
         // 
         btn_clubes.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
         btn_clubes.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btn_clubes.Location = new System.Drawing.Point(606, 176);
+        btn_clubes.Location = new System.Drawing.Point(703, 253);
         btn_clubes.Name = "btn_clubes";
         btn_clubes.Size = new System.Drawing.Size(550, 660);
         btn_clubes.TabIndex = 4;
@@ -89,7 +90,7 @@ partial class MainMenu
         // 
         // lbl_usr
         // 
-        lbl_usr.Location = new System.Drawing.Point(11, 152);
+        lbl_usr.Location = new System.Drawing.Point(6, 141);
         lbl_usr.Name = "lbl_usr";
         lbl_usr.Size = new System.Drawing.Size(353, 43);
         lbl_usr.TabIndex = 5;
@@ -103,65 +104,42 @@ partial class MainMenu
         lbl_name.TabIndex = 6;
         lbl_name.Text = "Nombre: ";
         // 
-        // btn_history
+        // btn_settings
         // 
-        btn_history.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
-        btn_history.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btn_history.Location = new System.Drawing.Point(6, 260);
-        btn_history.Name = "btn_history";
-        btn_history.Size = new System.Drawing.Size(190, 78);
-        btn_history.TabIndex = 7;
-        btn_history.Text = "Historial";
-        btn_history.UseVisualStyleBackColor = false;
+        btn_settings.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
+        btn_settings.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btn_settings.Location = new System.Drawing.Point(6, 260);
+        btn_settings.Name = "btn_settings";
+        btn_settings.Size = new System.Drawing.Size(190, 78);
+        btn_settings.TabIndex = 7;
+        btn_settings.Text = "Configuración de usuario";
+        btn_settings.UseVisualStyleBackColor = false;
         // 
         // grBx_main
         // 
         grBx_main.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
         grBx_main.BackColor = System.Drawing.Color.FromArgb(((int)((byte)142)), ((int)((byte)182)), ((int)((byte)155)));
-        grBx_main.Controls.Add(label2);
-        grBx_main.Controls.Add(label1);
+        grBx_main.Controls.Add(toolStrip1);
         grBx_main.Controls.Add(btn_culturales);
         grBx_main.Controls.Add(btn_deportivos);
         grBx_main.Controls.Add(lbl_welcome);
-        grBx_main.Controls.Add(btn_clubes);
+        grBx_main.Controls.Add(label1);
+        grBx_main.Controls.Add(label2);
         grBx_main.Controls.Add(btn_asesorias);
+        grBx_main.Controls.Add(btn_clubes);
         grBx_main.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        grBx_main.Location = new System.Drawing.Point(26, 33);
+        grBx_main.Location = new System.Drawing.Point(12, 12);
         grBx_main.Name = "grBx_main";
-        grBx_main.Size = new System.Drawing.Size(1201, 860);
+        grBx_main.Size = new System.Drawing.Size(1361, 1183);
         grBx_main.TabIndex = 8;
         grBx_main.TabStop = false;
         grBx_main.Text = "Inicio";
-        // 
-        // label2
-        // 
-        label2.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
-        label2.Font = new System.Drawing.Font("Segoe UI Semilight", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label2.Location = new System.Drawing.Point(726, 389);
-        label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(292, 152);
-        label2.TabIndex = 9;
-        label2.Text = "Infórmate y únete a alguna actividad cultural o deportiva";
-        label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        label2.Click += btn_clubes_Click;
-        // 
-        // label1
-        // 
-        label1.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
-        label1.Font = new System.Drawing.Font("Segoe UI Semilight", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label1.Location = new System.Drawing.Point(160, 378);
-        label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(292, 152);
-        label1.TabIndex = 8;
-        label1.Text = "Pide y organiza una asesoría con algún profesor";
-        label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        label1.Click += btn_asesorias_Click;
         // 
         // btn_culturales
         // 
         btn_culturales.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
         btn_culturales.Enabled = false;
-        btn_culturales.Location = new System.Drawing.Point(606, 209);
+        btn_culturales.Location = new System.Drawing.Point(50, 297);
         btn_culturales.Name = "btn_culturales";
         btn_culturales.Size = new System.Drawing.Size(550, 570);
         btn_culturales.TabIndex = 7;
@@ -174,7 +152,7 @@ partial class MainMenu
         // 
         btn_deportivos.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
         btn_deportivos.Enabled = false;
-        btn_deportivos.Location = new System.Drawing.Point(41, 209);
+        btn_deportivos.Location = new System.Drawing.Point(703, 299);
         btn_deportivos.Name = "btn_deportivos";
         btn_deportivos.Size = new System.Drawing.Size(550, 567);
         btn_deportivos.TabIndex = 6;
@@ -188,7 +166,7 @@ partial class MainMenu
         lbl_welcome.AutoSize = true;
         lbl_welcome.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lbl_welcome.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
-        lbl_welcome.Location = new System.Drawing.Point(202, 75);
+        lbl_welcome.Location = new System.Drawing.Point(220, 38);
         lbl_welcome.Name = "lbl_welcome";
         lbl_welcome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
         lbl_welcome.Size = new System.Drawing.Size(797, 54);
@@ -196,15 +174,39 @@ partial class MainMenu
         lbl_welcome.Text = "Bienvenid@ [usuario] Seleccione un servicio";
         lbl_welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
+        // label1
+        // 
+        label1.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
+        label1.Font = new System.Drawing.Font("Segoe UI Semilight", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label1.Location = new System.Drawing.Point(176, 552);
+        label1.Name = "label1";
+        label1.Size = new System.Drawing.Size(292, 152);
+        label1.TabIndex = 8;
+        label1.Text = "Pide y organiza una asesoría con algún profesor";
+        label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        label1.Click += btn_asesorias_Click;
+        // 
+        // label2
+        // 
+        label2.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
+        label2.Font = new System.Drawing.Font("Segoe UI Semilight", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label2.Location = new System.Drawing.Point(838, 574);
+        label2.Name = "label2";
+        label2.Size = new System.Drawing.Size(292, 152);
+        label2.TabIndex = 9;
+        label2.Text = "Infórmate y únete a alguna actividad cultural o deportiva";
+        label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        label2.Click += btn_clubes_Click;
+        // 
         // gbx_userInfo
         // 
         gbx_userInfo.BackColor = System.Drawing.Color.FromArgb(((int)((byte)142)), ((int)((byte)182)), ((int)((byte)155)));
         gbx_userInfo.Controls.Add(lbl_name);
         gbx_userInfo.Controls.Add(lbl_usr);
         gbx_userInfo.Controls.Add(btn_signout);
-        gbx_userInfo.Controls.Add(btn_history);
+        gbx_userInfo.Controls.Add(btn_settings);
         gbx_userInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        gbx_userInfo.Location = new System.Drawing.Point(1282, 33);
+        gbx_userInfo.Location = new System.Drawing.Point(1388, 12);
         gbx_userInfo.Name = "gbx_userInfo";
         gbx_userInfo.Size = new System.Drawing.Size(426, 344);
         gbx_userInfo.TabIndex = 9;
@@ -217,7 +219,7 @@ partial class MainMenu
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.FromArgb(((int)((byte)35)), ((int)((byte)83)), ((int)((byte)71)));
         CancelButton = btn_signout;
-        ClientSize = new System.Drawing.Size(1740, 942);
+        ClientSize = new System.Drawing.Size(1826, 1207);
         Controls.Add(gbx_userInfo);
         Controls.Add(grBx_main);
         Text = "Menú Principal";
@@ -226,6 +228,8 @@ partial class MainMenu
         gbx_userInfo.ResumeLayout(false);
         ResumeLayout(false);
     }
+
+    private System.Windows.Forms.ToolStrip toolStrip1;
 
     private System.Windows.Forms.Label label2;
 
@@ -240,7 +244,7 @@ partial class MainMenu
 
     private System.Windows.Forms.GroupBox grBx_main;
 
-    private System.Windows.Forms.Button btn_history;
+    private System.Windows.Forms.Button btn_settings;
 
     private System.Windows.Forms.Label lbl_usr;
 

@@ -9,7 +9,8 @@ public partial class MainMenu : Form
         lbl_usr.Text += user.Matricula;
         lbl_welcome.Text = $"Bienvenid@ {user.NombreCompleto} \n Seleccione el servicio que desea utilizar";
     }
-
+    
+        
     private void btn_signout_Click(object sender, EventArgs e)
     {
         this.Close();
@@ -39,13 +40,15 @@ public partial class MainMenu : Form
 
     private void btn_deportivos_Click(object sender, EventArgs e)
     {
-       Club2 deportivos = new Club2();
+       Club2 deportivos = new Club2(lbl_usr.Text);
        deportivos.Show();
     }
     
     private void btn_culturales_Click(object sender, EventArgs e)
     {
-        Club1 culturales = new Club1();
+        Club1 culturales = new Club1(lbl_usr.Text);
         culturales.Show();
     }
+
+
 }

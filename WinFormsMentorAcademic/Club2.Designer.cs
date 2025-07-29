@@ -53,7 +53,7 @@
             btn_taekwondo.TabIndex = 0;
             btn_taekwondo.Text = "Tae-kwon-do";
             btn_taekwondo.UseVisualStyleBackColor = true;
-            btn_taekwondo.Click += btn_seleccionado;
+            btn_taekwondo.Click += btn_taekwondo_Click;
             // 
             // btn_defensaPersonal
             // 
@@ -67,7 +67,7 @@
             btn_defensaPersonal.TabIndex = 4;
             btn_defensaPersonal.Text = "Defensa personal";
             btn_defensaPersonal.UseVisualStyleBackColor = true;
-            btn_defensaPersonal.Click += btn_seleccionado;
+            btn_defensaPersonal.Click += btn_defensaPersonal_Click;
             // 
             // btn_atletismo
             // 
@@ -81,7 +81,7 @@
             btn_atletismo.TabIndex = 1;
             btn_atletismo.Text = "Atletísmo";
             btn_atletismo.UseVisualStyleBackColor = true;
-            btn_atletismo.Click += btn_seleccionado;
+            btn_atletismo.Click += btn_atletismo_Click;
             // 
             // btn_basquetbol
             // 
@@ -95,7 +95,7 @@
             btn_basquetbol.TabIndex = 2;
             btn_basquetbol.Text = "Basquetbol";
             btn_basquetbol.UseVisualStyleBackColor = true;
-            btn_basquetbol.Click += btn_seleccionado;
+            btn_basquetbol.Click += btn_basquetbol_Click;
             // 
             // btn_karate
             // 
@@ -109,7 +109,7 @@
             btn_karate.TabIndex = 3;
             btn_karate.Text = "Karate";
             btn_karate.UseVisualStyleBackColor = true;
-            btn_karate.Click += btn_seleccionado;
+            btn_karate.Click += btn_karate_Click;
             // 
             // btn_crossfit
             // 
@@ -123,7 +123,7 @@
             btn_crossfit.TabIndex = 5;
             btn_crossfit.Text = "Crossfit";
             btn_crossfit.UseVisualStyleBackColor = true;
-            btn_crossfit.Click += btn_seleccionado;
+            btn_crossfit.Click += btn_crossfit_Click;
             // 
             // btn_futbol
             // 
@@ -137,7 +137,7 @@
             btn_futbol.TabIndex = 6;
             btn_futbol.Text = "Futbol";
             btn_futbol.UseVisualStyleBackColor = true;
-            btn_futbol.Click += btn_seleccionado;
+            btn_futbol.Click += btn_futbol_Click;
             // 
             // btn_kendo
             // 
@@ -151,7 +151,7 @@
             btn_kendo.TabIndex = 7;
             btn_kendo.Text = "Kendo";
             btn_kendo.UseVisualStyleBackColor = true;
-            btn_kendo.Click += btn_seleccionado;
+            btn_kendo.Click += btn_kendo_Click;
             // 
             // btn_beisbol
             // 
@@ -165,7 +165,7 @@
             btn_beisbol.TabIndex = 8;
             btn_beisbol.Text = "Beisbol";
             btn_beisbol.UseVisualStyleBackColor = true;
-            btn_beisbol.Click += btn_seleccionado;
+            btn_beisbol.Click += btn_beisbol_Click;
             // 
             // btn_voleybol
             // 
@@ -179,7 +179,7 @@
             btn_voleybol.TabIndex = 9;
             btn_voleybol.Text = "Voleybol";
             btn_voleybol.UseVisualStyleBackColor = true;
-            btn_voleybol.Click += btn_seleccionado;
+            btn_voleybol.Click += btn_voleybol_Click;
             // 
             // btn_regresar
             // 

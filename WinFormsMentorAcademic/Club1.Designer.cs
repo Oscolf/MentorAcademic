@@ -64,7 +64,7 @@ partial class Club1
         btn_porristas.TabIndex = 3;
         btn_porristas.Text = "Porristas";
         btn_porristas.UseVisualStyleBackColor = false;
-        btn_porristas.Click += btn_seleccionado;
+        btn_porristas.Click += btn_porristas_Click;
         // 
         // btn_rondallaCanto
         // 
@@ -79,7 +79,7 @@ partial class Club1
         btn_rondallaCanto.TabIndex = 4;
         btn_rondallaCanto.Text = "Rondalla y canto";
         btn_rondallaCanto.UseVisualStyleBackColor = false;
-        btn_rondallaCanto.Click += btn_seleccionado;
+        btn_rondallaCanto.Click += btn_rondallaCanto_Click;
         // 
         // btn_ritmosLatinos
         // 
@@ -94,7 +94,7 @@ partial class Club1
         btn_ritmosLatinos.TabIndex = 5;
         btn_ritmosLatinos.Text = "Ritmos Latinos";
         btn_ritmosLatinos.UseVisualStyleBackColor = false;
-        btn_ritmosLatinos.Click += btn_seleccionado;
+        btn_ritmosLatinos.Click += btn_ritmosLatinos_Click;
         // 
         // btn_bandaGuerra
         // 
@@ -109,7 +109,7 @@ partial class Club1
         btn_bandaGuerra.TabIndex = 2;
         btn_bandaGuerra.Text = "Banda de guerra";
         btn_bandaGuerra.UseVisualStyleBackColor = false;
-        btn_bandaGuerra.Click += btn_seleccionado;
+        btn_bandaGuerra.Click += btn_bandaGuerra_Click;
         // 
         // btn_ajedrez
         // 
@@ -124,7 +124,7 @@ partial class Club1
         btn_ajedrez.TabIndex = 1;
         btn_ajedrez.Text = "Ajedrez";
         btn_ajedrez.UseVisualStyleBackColor = false;
-        btn_ajedrez.Click += btn_seleccionado;
+        btn_ajedrez.Click += btn_ajedrez_Click;
         // 
         // btn_danzaFolk
         // 
@@ -139,7 +139,7 @@ partial class Club1
         btn_danzaFolk.TabIndex = 0;
         btn_danzaFolk.Text = "Danza Folklórica";
         btn_danzaFolk.UseVisualStyleBackColor = false;
-        btn_danzaFolk.Click += btn_seleccionado;
+        btn_danzaFolk.Click += btn_danzaFolk_Click;
         // 
         // Club1
         // 
@@ -148,7 +148,7 @@ partial class Club1
         BackColor = System.Drawing.Color.FromArgb(((int)((byte)0)), ((int)((byte)63)), ((int)((byte)63)));
         BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         CancelButton = btn_regresar;
-        ClientSize = new System.Drawing.Size(978, 803);
+        ClientSize = new System.Drawing.Size(1123, 802);
         Controls.Add(btn_regresar);
         Controls.Add(btn_ritmosLatinos);
         Controls.Add(btn_porristas);
