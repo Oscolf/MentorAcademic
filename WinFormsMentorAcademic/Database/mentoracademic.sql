@@ -25,18 +25,25 @@ CREATE TABLE profesores
     nombre      varchar(50)  NOT NULL,
     apellido    varchar(50)  NOT NULL,
     email       varchar(100) NOT NULL UNIQUE,
-    hora_inicio time DEFAULT NULL,
-    hora_fin    time DEFAULT NULL,
-    idMateria   int  DEFAULT NULL
+    horario	    int 		 NOT NULL,
+    idMateria   int          NOT NULL
+);
+
+CREATE TABLE horarios
+(
+    idHorario   int          NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    idProfesor  int          NOT NULL,
+    dia         enum         ('Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes') NOT NULL,
+    hora_inicio time         NOT NULL,
+    hora_fin    time         NOT NULL
 );
 
 CREATE TABLE alumnos
 (
-    idAlumno        int          NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    matricula       varchar(10)  UNIQUE,
     nombre          varchar(50)  NOT NULL,
     apellido        varchar(50)  NOT NULL,
     email           varchar(100) NOT NULL UNIQUE,
-    matricula       varchar(10)  NOT NULL UNIQUE,
     contasena       varchar(100) NOT NULL,
     numero_telefono int DEFAULT NULL,
     nss             int DEFAULT NULL,
@@ -46,7 +53,7 @@ CREATE TABLE alumnos
 CREATE TABLE asesorias
 (
     idAsesoria int                                           NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    idAlumno   int                                           NOT NULL,
+    idAlumno   varchar(10)                                   NOT NULL,
     idProfesor int                                           NOT NULL,
     fecha      date                                          NOT NULL,
     hora       time                                          NOT NULL,
@@ -60,8 +67,7 @@ CREATE TABLE encargadosclubes
     nombre      varchar(50)  NOT NULL,
     apellido    varchar(50)  NOT NULL,
     email       varchar(100) NOT NULL UNIQUE
-);
-
+); 
 -- Agregar llaves foráneas
 
 ALTER TABLE alumnos
@@ -70,11 +76,13 @@ ALTER TABLE alumnos
 
 ALTER TABLE profesores
     ADD CONSTRAINT fk_profesores_materia
-        FOREIGN KEY (idMateria) REFERENCES materias(idMateria);
+        FOREIGN KEY (idMateria) REFERENCES materias(idMateria),
+    ADD CONSTRAINT fk_profesores_horario
+        FOREIGN KEY (horario) REFERENCES horarios(idHorario);
 
 ALTER TABLE asesorias
     ADD CONSTRAINT fk_asesorias_alumno
-        FOREIGN KEY (idAlumno) REFERENCES alumnos(idAlumno),
+        FOREIGN KEY (idAlumno) REFERENCES alumnos(matricula),
     ADD CONSTRAINT fk_asesorias_profesor
         FOREIGN KEY (idProfesor) REFERENCES profesores(idProfesor);
 

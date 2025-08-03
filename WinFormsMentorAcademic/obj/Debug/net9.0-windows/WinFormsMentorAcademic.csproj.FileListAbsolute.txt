@@ -49,8 +49,6 @@ C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\bin\Debug\net9
 C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\bin\Debug\net9.0-windows\SQLqueries.pdb
 C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\bin\Debug\net9.0-windows\MySql.Data.xml
 C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.csproj.AssemblyReference.cache
-C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.Club1.resources
-C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.Club2.resources
 C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.Fondos.resources
 C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.MainMenu.resources
 C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.csproj.GenerateResource.cache
@@ -65,7 +63,10 @@ C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9
 C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.pdb
 C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.genruntimeconfig.cache
 C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\ref\WinFormsMentorAcademic.dll
-C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.Asesoria.resources
 C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.Confirmacion.resources
 C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.ConfirmacionClubes.resources
 C:\Users\zndro\OneDrive\Desktop\Proyecto Integrador\Programa\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.MainMenu.resources
+C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.Confirmacion.resources
+C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.ConfirmacionClubes.resources
+C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.SignUp.resources
+C:\Users\zndro\Source\Repos\MentorAcademic\WinFormsMentorAcademic\obj\Debug\net9.0-windows\WinFormsMentorAcademic.LogIn.resources

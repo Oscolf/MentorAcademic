@@ -7,7 +7,7 @@ public partial class MainMenu : Form
     public MainMenu(User user)
     {
         InitializeComponent();
-        lbl_name.Text += user.NombreCompleto;
+        lbl_name.Text = user.NombreCompleto;
         lbl_matr.Text = user.Matricula;
         lbl_welcome.Text = $"Bienvenid@ {user.NombreCompleto} \n Seleccione el servicio que desea utilizar";
     }
@@ -15,6 +15,48 @@ public partial class MainMenu : Form
     private void btn_signout_Click(object sender, EventArgs e)
     {
         this.Close();
+    }
+    private void btn_config_Click(object sender, EventArgs e)
+    {
+        SqlQueries configQueries = new SqlQueries("server=localhost;" +
+                                                  "port=3306;" +
+                                                  "database=mentoracademic;" +
+                                                  "uid=root;" +
+                                                  "sslmode=none;");
+
+        string cmd = "SELECT alumnos.*, clubes.nombre AS club_nombre " +
+                     "FROM alumnos JOIN clubes ON alumnos.club_pertenece = clubes.idClub " +
+                     $"WHERE matricula = '{lbl_matr.Text}';";
+
+        MySqlDataReader alumnoReader = configQueries.ExecuteReader(cmd);
+
+        alumnoReader.Read();
+
+        txBx_FullName.Text = $"{alumnoReader["nombre"]} {alumnoReader["apellido"]}";
+        txBx_Email.Text = alumnoReader["email"].ToString();
+        txBx_Password.Text = alumnoReader["contasena"].ToString();
+        txBx_ClubSigned.Text = alumnoReader["club_nombre"].ToString();
+
+        alumnoReader.Dispose();
+
+        cmd = "SELECT asesorias.estado, asesorias.fecha, asesorias.hora, profesores.nombre, profesores.apellido " +
+              "FROM asesorias JOIN profesores JOIN alumnos " +
+              "ON asesorias.idAlumno = alumnos.matricula AND asesorias.idProfesor = profesores.idProfesor " +
+              $"WHERE asesorias.idAlumno = '{lbl_matr.Text}';";
+
+        MySqlDataReader asesoriaReader = configQueries.ExecuteReader(cmd);
+
+        while (asesoriaReader.Read())
+        {
+            ltBx_AsesoriasReg.Items.Add(
+                $"Estado: {asesoriaReader["estado"]} \n >> {asesoriaReader["fecha"]} - {asesoriaReader["hora"]}\n" +
+                $"Impartida por: {asesoriaReader["nombre"]} {asesoriaReader["apellido"]}\n\n");
+        }
+
+        asesoriaReader.Dispose();
+        configQueries.Get_Connection().Close();
+
+        tabControl.SelectedIndex = 4;
     }
 
     //empieza tab principal
@@ -48,43 +90,73 @@ public partial class MainMenu : Form
         tabControl.SelectedIndex = 3;
     }
 
-    private void btn_settings_Click(object sender, EventArgs e)
-    {
-        tabControl.SelectedIndex = 4;
-    }
-
     //termina tab principal
 
     //empieza tab asesorias
 
+
+    List<int> profIDs = new List<int>();
+    List<string> horarios = new List<string>();
     private void cmBx_Course_SelectedIndexChanged(object sender, EventArgs e)
     {
+        ltBx_profesores.Items.Clear();
+
         SqlQueries asesoriaQueries = new SqlQueries("server=localhost;" +
                                                     "port=3306;" +
                                                     "database=mentoracademic;" +
                                                     "uid=root;" +
                                                     "sslmode=none;");
-        string cmd =
-            "SELECT profesores.nombre, profesores.apellido, profesores.hora_inicio, profesores.hora_fin " + 
-            "FROM profesores JOIN materias  ON profesores.idMateria = materias.idMateria " + 
-            $"WHERE materias.nombre = '{cmBx_Course.Text}';";
-        
+
+        string cmd = "SELECT profesores.idProfesor, profesores.nombre, profesores.apellido " +
+                     "FROM profesores JOIN materias ON profesores.idMateria = materias.idMateria " +
+                     $"WHERE materias.nombre = '{cmBx_Course.Text}';";
+
         MySqlDataReader reader = asesoriaQueries.ExecuteReader(cmd);
-        if (reader.Read())
+
+        while (reader.Read())
         {
             ltBx_profesores.Items.Add($"{reader["nombre"]} {reader["apellido"]}");
-            ltBx_horarios.Items.Add($"{reader["hora_inicio"]} - {reader["hora_fin"]}");
-            btn_reservar.Enabled = true;
+            profIDs.Add(Convert.ToInt32(reader["idProfesor"]));
         }
-        else
+
+        asesoriaQueries.Get_Connection().Close();
+
+    }
+    private void ltBx_profesores_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+        ltBx_horarios.Items.Clear();
+
+        SqlQueries selHorarioQueries = new SqlQueries("server=localhost;" +
+                                                    "port=3306;" +
+                                                    "database=mentoracademic;" +
+                                                    "uid=root;" +
+                                                    "sslmode=none;");
+        string cmd = "SELECT horarios.dia, horarios.hora_inicio, horarios.hora_fin " +
+                     "FROM profesores JOIN horarios ON profesores.idProfesor = horarios.idProfesor " +
+                     $"WHERE profesores.idProfesor = '{profIDs[ltBx_profesores.SelectedIndex]}';";
+
+        MySqlDataReader reader = selHorarioQueries.ExecuteReader(cmd);
+
+        while (reader.Read())
         {
-            MessageBox.Show("No se encontró información para la materia seleccionada.");
+           ltBx_horarios.Items.Add($"{reader["dia"]} {reader["hora_inicio"]} - {reader["hora_fin"]}");
+           horarios.Add(reader["hora_inicio"].ToString());
         }
+
+        selHorarioQueries.Get_Connection().Close();
+
     }
 
     private void btn_reservar_Click(object sender, EventArgs e)
     {
-        Confirmacion confirmacion = new Confirmacion();
+        string profe = ltBx_profesores.SelectedItem.ToString();
+        string materia = cmBx_Course.SelectedItem.ToString();
+        string horario = ltBx_horarios.SelectedItem.ToString();
+        string hora_inicio = horarios[ltBx_horarios.SelectedIndex]; 
+
+        Confirmacion confirmacion = 
+            new Confirmacion(profe, lbl_name.Text, materia, horario, hora_inicio, lbl_matr.Text, profIDs[ltBx_profesores.SelectedIndex]);
         confirmacion.Show();
     }
 
@@ -204,9 +276,18 @@ public partial class MainMenu : Form
 
         lbl_welcome.Text = $"Bienvenid@ \n Seleccione el servicio que desea utilizar";
     }
+
+
     //termina tab clubes culturales
 
     //empieza tab configuracion
+
+    private void btn_showPass_Click(object sender, EventArgs e)
+    {
+        txBx_Password.UseSystemPasswordChar = !txBx_Password.UseSystemPasswordChar;
+    }
+
+
 
     //termina tab configuracion
 }

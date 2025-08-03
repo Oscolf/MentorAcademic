@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\WinFormsMentorAcademic\\WinFormsMentorAcademic.csproj": {}
+    "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\WinFormsMentorAcademic\\WinFormsMentorAcademic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\SQLqueries\\SQLqueries.csproj": {
+    "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\SQLqueries\\SQLqueries.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\SQLqueries\\SQLqueries.csproj",
+        "projectUniqueName": "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\SQLqueries\\SQLqueries.csproj",
         "projectName": "SQLqueries",
-        "projectPath": "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\SQLqueries\\SQLqueries.csproj",
+        "projectPath": "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\SQLqueries\\SQLqueries.csproj",
         "packagesPath": "C:\\Users\\zndro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\SQLqueries\\obj\\",
+        "outputPath": "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\SQLqueries\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\WinFormsMentorAcademic\\WinFormsMentorAcademic.csproj": {
+    "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\WinFormsMentorAcademic\\WinFormsMentorAcademic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\WinFormsMentorAcademic\\WinFormsMentorAcademic.csproj",
+        "projectUniqueName": "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\WinFormsMentorAcademic\\WinFormsMentorAcademic.csproj",
         "projectName": "WinFormsMentorAcademic",
-        "projectPath": "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\WinFormsMentorAcademic\\WinFormsMentorAcademic.csproj",
+        "projectPath": "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\WinFormsMentorAcademic\\WinFormsMentorAcademic.csproj",
         "packagesPath": "C:\\Users\\zndro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\WinFormsMentorAcademic\\obj\\",
+        "outputPath": "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\WinFormsMentorAcademic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -97,8 +97,8 @@
           "net9.0-windows7.0": {
             "targetAlias": "net9.0-windows",
             "projectReferences": {
-              "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\SQLqueries\\SQLqueries.csproj": {
-                "projectPath": "C:\\Users\\zndro\\OneDrive\\Desktop\\Proyecto Integrador\\Programa\\SQLqueries\\SQLqueries.csproj"
+              "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\SQLqueries\\SQLqueries.csproj": {
+                "projectPath": "C:\\Users\\zndro\\Source\\Repos\\MentorAcademic\\SQLqueries\\SQLqueries.csproj"
               }
             }
           }

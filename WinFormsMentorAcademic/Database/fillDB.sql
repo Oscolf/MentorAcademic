@@ -29,19 +29,36 @@ VALUES
     ('Proyecto Integrador I', 'Elaboración de un protoipo de un software apuntando a una necesidad real'),
     ('Tópicos de Calidad para el Diseño de Software', 'Curso acerca de la calidad en el desarrollo de software');
 
-INSERT INTO profesores (nombre, apellido, email, idMateria, hora_inicio, hora_fin)
+INSERT INTO profesores (nombre, apellido, email, idMateria)
 VALUES
-    ('Berenice Anabella', 'Leal Fuentes', 'berenice.leal@utpuebla.edu.mx', 1, '08:00:00', '10:00:00'),
-    ('Antonio', 'Cid García', 'antonio.cid@utpuebla.edu.mx', 2, '10:00:00', '12:00:00'),
-    ('Ana María', 'Ramírez Casco', 'ana.ramirez@utpuebla.edu.mx', 3, '12:00:00', '14:00:00'),
-    ('María del Rocío', 'Camarillo Huerta', 'maria.camarillo@utpuebla.edu.mx', 4, '14:00:00', '16:00:00'),
-    ('Guillermo', 'Sánchez Flores', 'guillermo.sanchez@utpuebla.edu.mx', 5, '16:00:00', '18:00:00'),
-    ('José de Jesús', 'García Sánchez', 'jose.garcia@utpuebla.edu.mx', 6, '08:00:00', '10:00:00'),
-    ('Julia Elena', 'Pérez Martínez', 'julia.perez@utpuebla.edu.mx', 7, '10:00:00', '12:00:00');
+    ('Berenice Anabella', 'Leal Fuentes', 'berenice.leal@utpuebla.edu.mx', 1),
+    ('Antonio', 'Cid García', 'antonio.cid@utpuebla.edu.mx', 2),
+    ('Ana María', 'Ramírez Casco', 'ana.ramirez@utpuebla.edu.mx', 3),
+    ('María del Rocío', 'Camarillo Huerta', 'maria.camarillo@utpuebla.edu.mx', 4),
+    ('Guillermo', 'Sánchez Flores', 'guillermo.sanchez@utpuebla.edu.mx', 5),
+    ('José de Jesús', 'García Sánchez', 'jose.garcia@utpuebla.edu.mx', 6),
+    ('Julia Elena', 'Pérez Martínez', 'julia.perez@utpuebla.edu.mx', 7);
+
+INSERT INTO horarios (idProfesor, dia, hora_inicio, hora_fin)
+VALUES
+    (1, 'Lunes', '08:00:00', '10:00:00'),
+    (2, 'Martes', '10:00:00', '12:00:00'),
+    (3, 'Miércoles', '12:00:00', '14:00:00'),
+    (4, 'Jueves', '14:00:00', '16:00:00'),
+    (5, 'Viernes', '16:00:00', '18:00:00'),
+    (6, 'Lunes', '10:00:00', '12:00:00'),
+    (7, 'Martes', '08:00:00', '10:00:00'),
+    (2, 'Lunes', '12:00:00', '14:00:00'),
+    (3, 'Martes', '14:00:00', '16:00:00'),
+    (4, 'Miércoles', '08:00:00', '10:00:00'),
+    (5, 'Jueves', '10:00:00', '12:00:00'),
+    (6, 'Viernes', '12:00:00', '14:00:00'),
+    (7, 'Lunes', '16:00:00', '18:00:00'),
+    (6, 'Martes', '16:00:00', '18:00:00'),
+    (7, 'Miércoles', '10:00:00', '12:00:00'),
+    (1, 'Jueves', '08:00:00', '10:00:00'),
+    (2, 'Viernes', '14:00:00', '16:00:00');
 
 INSERT INTO alumnos (nombre, apellido, email, contasena, matricula)
 VALUES 
-    ('Joshue', 'Herrada Solís', 'utp0000000@alumno.utpuebla.edu.mx', '1234567890', '0000000'),
-    ('Alexia', 'Méndez Palacios', 'utp0000001@alumno.utpuebla.edu.mx', '1234567890', '0000001'),
-    ('Martín', 'Romero Vélez', 'utp0000002@alumno.utpuebla.edu.mx', '1234567890', '0000002'),
     ('Oscar Olaf', 'Vázquez Rojas', 'utp0210139@alumno.utpuebla.edu.mx', '1234567890', '0210139');

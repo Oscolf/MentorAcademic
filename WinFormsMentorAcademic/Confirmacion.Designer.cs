@@ -31,12 +31,19 @@
             label1 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
+            lbl_ConfirmHorainicio = new Label();
+            lbl_ConfirmProfID = new Label();
+            lbl_ConfirmHorario = new Label();
+            lbl_ConfirmProfe = new Label();
+            lbl_ConfirmMateria = new Label();
             label5 = new Label();
             label3 = new Label();
             label4 = new Label();
             groupBox2 = new GroupBox();
             btn_print = new Button();
             btn_back = new Button();
+            lbl_ConfirmarMatrText = new Label();
+            lbl_ConfirmarMatr = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -63,6 +70,11 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(lbl_ConfirmHorainicio);
+            groupBox1.Controls.Add(lbl_ConfirmProfID);
+            groupBox1.Controls.Add(lbl_ConfirmHorario);
+            groupBox1.Controls.Add(lbl_ConfirmProfe);
+            groupBox1.Controls.Add(lbl_ConfirmMateria);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label4);
@@ -73,6 +85,51 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos";
+            // 
+            // lbl_ConfirmHorainicio
+            // 
+            lbl_ConfirmHorainicio.AutoSize = true;
+            lbl_ConfirmHorainicio.Location = new Point(605, 148);
+            lbl_ConfirmHorainicio.Name = "lbl_ConfirmHorainicio";
+            lbl_ConfirmHorainicio.Size = new Size(0, 30);
+            lbl_ConfirmHorainicio.TabIndex = 12;
+            lbl_ConfirmHorainicio.Visible = false;
+            // 
+            // lbl_ConfirmProfID
+            // 
+            lbl_ConfirmProfID.AutoSize = true;
+            lbl_ConfirmProfID.Location = new Point(605, 86);
+            lbl_ConfirmProfID.Name = "lbl_ConfirmProfID";
+            lbl_ConfirmProfID.Size = new Size(0, 30);
+            lbl_ConfirmProfID.TabIndex = 11;
+            lbl_ConfirmProfID.Visible = false;
+            // 
+            // lbl_ConfirmHorario
+            // 
+            lbl_ConfirmHorario.AutoSize = true;
+            lbl_ConfirmHorario.Location = new Point(113, 133);
+            lbl_ConfirmHorario.Name = "lbl_ConfirmHorario";
+            lbl_ConfirmHorario.Size = new Size(140, 30);
+            lbl_ConfirmHorario.TabIndex = 10;
+            lbl_ConfirmHorario.Text = "00:00 - 00:00";
+            // 
+            // lbl_ConfirmProfe
+            // 
+            lbl_ConfirmProfe.AutoSize = true;
+            lbl_ConfirmProfe.Location = new Point(118, 86);
+            lbl_ConfirmProfe.Name = "lbl_ConfirmProfe";
+            lbl_ConfirmProfe.Size = new Size(188, 30);
+            lbl_ConfirmProfe.TabIndex = 9;
+            lbl_ConfirmProfe.Text = "Profesor Genérico";
+            // 
+            // lbl_ConfirmMateria
+            // 
+            lbl_ConfirmMateria.AutoSize = true;
+            lbl_ConfirmMateria.Location = new Point(113, 39);
+            lbl_ConfirmMateria.Name = "lbl_ConfirmMateria";
+            lbl_ConfirmMateria.Size = new Size(178, 30);
+            lbl_ConfirmMateria.TabIndex = 8;
+            lbl_ConfirmMateria.Text = "Materia Genérica";
             // 
             // label5
             // 
@@ -126,7 +183,7 @@
             btn_print.Name = "btn_print";
             btn_print.Size = new Size(285, 79);
             btn_print.TabIndex = 1;
-            btn_print.Text = "Imprimir";
+            btn_print.Text = "Agendar";
             btn_print.UseVisualStyleBackColor = false;
             btn_print.Click += btn_print_Click;
             // 
@@ -143,6 +200,26 @@
             btn_back.Text = "Regresar";
             btn_back.UseVisualStyleBackColor = false;
             // 
+            // lbl_ConfirmarMatrText
+            // 
+            lbl_ConfirmarMatrText.AutoSize = true;
+            lbl_ConfirmarMatrText.ForeColor = Color.FromArgb(218, 241, 222);
+            lbl_ConfirmarMatrText.Location = new Point(424, 597);
+            lbl_ConfirmarMatrText.Name = "lbl_ConfirmarMatrText";
+            lbl_ConfirmarMatrText.Size = new Size(177, 25);
+            lbl_ConfirmarMatrText.TabIndex = 4;
+            lbl_ConfirmarMatrText.Text = "Matrícula a registrar: ";
+            // 
+            // lbl_ConfirmarMatr
+            // 
+            lbl_ConfirmarMatr.AutoSize = true;
+            lbl_ConfirmarMatr.ForeColor = Color.FromArgb(218, 241, 222);
+            lbl_ConfirmarMatr.Location = new Point(607, 597);
+            lbl_ConfirmarMatr.Name = "lbl_ConfirmarMatr";
+            lbl_ConfirmarMatr.Size = new Size(109, 25);
+            lbl_ConfirmarMatr.TabIndex = 5;
+            lbl_ConfirmarMatr.Text = "utp0000000";
+            // 
             // Confirmacion
             // 
             AcceptButton = btn_print;
@@ -151,6 +228,8 @@
             BackColor = Color.FromArgb(22, 56, 50);
             CancelButton = btn_back;
             ClientSize = new Size(758, 650);
+            Controls.Add(lbl_ConfirmarMatr);
+            Controls.Add(lbl_ConfirmarMatrText);
             Controls.Add(groupBox2);
             Controls.Add(btn_back);
             Margin = new Padding(4, 5, 4, 5);
@@ -161,6 +240,7 @@
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         private System.Windows.Forms.Label label4;
@@ -175,5 +255,12 @@
         private System.Windows.Forms.Button btn_print;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Label label3;
+        private Label lbl_ConfirmHorario;
+        private Label lbl_ConfirmProfe;
+        private Label lbl_ConfirmMateria;
+        private Label lbl_ConfirmarMatrText;
+        private Label lbl_ConfirmarMatr;
+        private Label lbl_ConfirmProfID;
+        private Label lbl_ConfirmHorainicio;
     }
 }

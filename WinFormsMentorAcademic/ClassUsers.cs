@@ -38,7 +38,11 @@ public class User
             if (atCont != 1 || dotCont < 1)
                 _email = "INVALID";
             else
+            {
                 _email = value;
+                Matricula = value; // Matricula es derivado del email
+            }
+
         }
     }
     public string Matricula
