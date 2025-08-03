@@ -25,7 +25,7 @@ CREATE TABLE profesores
     nombre      varchar(50)  NOT NULL,
     apellido    varchar(50)  NOT NULL,
     email       varchar(100) NOT NULL UNIQUE,
-    horario	    int 		 NOT NULL,
+    horario	    int 		 DEFAULT NULL,
     idMateria   int          NOT NULL
 );
 
@@ -76,10 +76,12 @@ ALTER TABLE alumnos
 
 ALTER TABLE profesores
     ADD CONSTRAINT fk_profesores_materia
-        FOREIGN KEY (idMateria) REFERENCES materias(idMateria),
-    ADD CONSTRAINT fk_profesores_horario
-        FOREIGN KEY (horario) REFERENCES horarios(idHorario);
-
+        FOREIGN KEY (idMateria) REFERENCES materias(idMateria);
+        
+ALTER TABLE horarios
+	ADD CONSTRAINT fk_horarios_profesor
+		FOREIGN KEY (idProfesor) REFERENCES profesores(idProfesor);
+        
 ALTER TABLE asesorias
     ADD CONSTRAINT fk_asesorias_alumno
         FOREIGN KEY (idAlumno) REFERENCES alumnos(matricula),
