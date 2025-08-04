@@ -19,8 +19,8 @@ public partial class LogIn : Form
 
         if (user.ValidateLogin())
         {
-            MainMenu MenuPrincipal = new MainMenu(user);
-            MenuPrincipal.Show();
+            MainMenu menuPrincipal = new MainMenu(user);
+            menuPrincipal.Show();
             this.Hide();
         }
     }
@@ -48,5 +48,10 @@ public partial class LogIn : Form
         SignUp registro = new SignUp();
         registro.Show();
         this.Hide();
+    }
+
+    private void btn_verContrasena_Click(object sender, EventArgs e)
+    {
+        txB_password.UseSystemPasswordChar = !txB_password.UseSystemPasswordChar;
     }
 }

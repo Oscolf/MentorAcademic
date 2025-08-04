@@ -12,20 +12,33 @@ public partial class MainMenu : Form
         lbl_welcome.Text = $"Bienvenid@ {user.NombreCompleto} \n Seleccione el servicio que desea utilizar";
     }
 
+    private readonly string _connectionString = "server=localhost;port=3306;uid=root;database=mentoracademic;sslmode=none";
+
     private void btn_signout_Click(object sender, EventArgs e)
     {
         this.Close();
     }
+    private void btn_regresar_Click(object sender, EventArgs e)
+    {
+        tabControl.SelectedIndex = 0;
+
+        btn_asesorias.Visible = true; btn_clubes.Visible = true;
+        lbl_asesorias.Visible = true; lbl_clubes.Visible = true;
+
+        btn_culturales.Visible = false; btn_culturales.Enabled = false;
+        btn_deportivos.Visible = false; btn_deportivos.Enabled = false;
+
+        lbl_welcome.Text = $"Bienvenid@ {lbl_name.Text}\n Seleccione el servicio que desea utilizar";
+    }
+    
     private void btn_config_Click(object sender, EventArgs e)
     {
-        SqlQueries configQueries = new SqlQueries("server=localhost;" +
-                                                  "port=3306;" +
-                                                  "database=mentoracademic;" +
-                                                  "uid=root;" +
-                                                  "sslmode=none;");
+        ltBx_AsesoriasReg.Items.Clear();
+        
+        SqlQueries configQueries = new SqlQueries(_connectionString);
 
-        string cmd = "SELECT alumnos.*, clubes.nombre AS club_nombre " +
-                     "FROM alumnos JOIN clubes ON alumnos.club_pertenece = clubes.idClub " +
+        string cmd = "SELECT alumnos.* , clubes.nombre AS club_nombre " +
+                     "FROM alumnos LEFT JOIN clubes ON alumnos.club_pertenece = clubes.idClub " +
                      $"WHERE matricula = '{lbl_matr.Text}';";
 
         MySqlDataReader alumnoReader = configQueries.ExecuteReader(cmd);
@@ -49,7 +62,7 @@ public partial class MainMenu : Form
         while (asesoriaReader.Read())
         {
             ltBx_AsesoriasReg.Items.Add(
-                $"Estado: {asesoriaReader["estado"]} \n >> {asesoriaReader["fecha"]} - {asesoriaReader["hora"]}\n" +
+                $"Estado: {asesoriaReader["estado"]} >> {Convert.ToDateTime(asesoriaReader["fecha"]):yyyy-MM-dd} a las {asesoriaReader["hora"]} hrs | " +
                 $"Impartida por: {asesoriaReader["nombre"]} {asesoriaReader["apellido"]}\n\n");
         }
 
@@ -93,19 +106,15 @@ public partial class MainMenu : Form
     //termina tab principal
 
     //empieza tab asesorias
-
-
-    List<int> profIDs = new List<int>();
-    List<string> horarios = new List<string>();
+    
+    List<int> _profIDs = new List<int>();
+    List<string> _horarios = new List<string>();
     private void cmBx_Course_SelectedIndexChanged(object sender, EventArgs e)
     {
-        ltBx_profesores.Items.Clear();
+        ltBx_horarios.Items.Clear();    _horarios.Clear();
+        ltBx_profesores.Items.Clear();  _profIDs.Clear();
 
-        SqlQueries asesoriaQueries = new SqlQueries("server=localhost;" +
-                                                    "port=3306;" +
-                                                    "database=mentoracademic;" +
-                                                    "uid=root;" +
-                                                    "sslmode=none;");
+        SqlQueries asesoriaQueries = new SqlQueries(_connectionString);
 
         string cmd = "SELECT profesores.idProfesor, profesores.nombre, profesores.apellido " +
                      "FROM profesores JOIN materias ON profesores.idMateria = materias.idMateria " +
@@ -116,36 +125,30 @@ public partial class MainMenu : Form
         while (reader.Read())
         {
             ltBx_profesores.Items.Add($"{reader["nombre"]} {reader["apellido"]}");
-            profIDs.Add(Convert.ToInt32(reader["idProfesor"]));
+            _profIDs.Add(Convert.ToInt32(reader["idProfesor"]));
         }
 
         asesoriaQueries.Get_Connection().Close();
-
     }
     private void ltBx_profesores_SelectedIndexChanged(object sender, EventArgs e)
     {
 
         ltBx_horarios.Items.Clear();
 
-        SqlQueries selHorarioQueries = new SqlQueries("server=localhost;" +
-                                                    "port=3306;" +
-                                                    "database=mentoracademic;" +
-                                                    "uid=root;" +
-                                                    "sslmode=none;");
+        SqlQueries selHorarioQueries = new SqlQueries(_connectionString);
         string cmd = "SELECT horarios.dia, horarios.hora_inicio, horarios.hora_fin " +
                      "FROM profesores JOIN horarios ON profesores.idProfesor = horarios.idProfesor " +
-                     $"WHERE profesores.idProfesor = '{profIDs[ltBx_profesores.SelectedIndex]}';";
+                     $"WHERE profesores.idProfesor = '{_profIDs[ltBx_profesores.SelectedIndex]}';";
 
         MySqlDataReader reader = selHorarioQueries.ExecuteReader(cmd);
 
         while (reader.Read())
         {
-           ltBx_horarios.Items.Add($"{reader["dia"]} {reader["hora_inicio"]} - {reader["hora_fin"]}");
-           horarios.Add(reader["hora_inicio"].ToString());
+            ltBx_horarios.Items.Add($"{reader["dia"]} {reader["hora_inicio"]} - {reader["hora_fin"]}");
+            _horarios.Add(reader["hora_inicio"].ToString());
         }
 
         selHorarioQueries.Get_Connection().Close();
-
     }
 
     private void btn_reservar_Click(object sender, EventArgs e)
@@ -153,13 +156,15 @@ public partial class MainMenu : Form
         string profe = ltBx_profesores.SelectedItem.ToString();
         string materia = cmBx_Course.SelectedItem.ToString();
         string horario = ltBx_horarios.SelectedItem.ToString();
-        string hora_inicio = horarios[ltBx_horarios.SelectedIndex]; 
+        string dia = dateTP_asesoria.Value.ToString("yy-MM-dd");
+        string horaInicio = _horarios[ltBx_horarios.SelectedIndex]; 
+        int profID = _profIDs[ltBx_profesores.SelectedIndex];
 
         Confirmacion confirmacion = 
-            new Confirmacion(profe, lbl_name.Text, materia, horario, hora_inicio, lbl_matr.Text, profIDs[ltBx_profesores.SelectedIndex]);
+            new Confirmacion(profe, materia, horario,dia, horaInicio, lbl_matr.Text, profID);
+        
         confirmacion.Show();
     }
-
     //termina tab asesorias
 
     //empieza tab clubes deportivos
@@ -274,7 +279,7 @@ public partial class MainMenu : Form
         btn_culturales.Visible = false; btn_culturales.Enabled = false;
         btn_deportivos.Visible = false; btn_deportivos.Enabled = false;
 
-        lbl_welcome.Text = $"Bienvenid@ \n Seleccione el servicio que desea utilizar";
+        lbl_welcome.Text = $"Bienvenid@ {lbl_name.Text}\n Seleccione el servicio que desea utilizar";
     }
 
 
@@ -286,8 +291,60 @@ public partial class MainMenu : Form
     {
         txBx_Password.UseSystemPasswordChar = !txBx_Password.UseSystemPasswordChar;
     }
+    private void btn_changePass_Click(object sender, EventArgs e)
+    {
+        if (txBx_Password.Enabled)
+        {
+            SqlQueries passwordQueries = new SqlQueries(_connectionString);
 
+            string cmd = $"UPDATE alumnos SET contasena = '{txBx_Password.Text}' WHERE matricula = '{lbl_matr.Text}';";
+            passwordQueries.GetCommand_and_ExecuteNonQuery(cmd);
 
+            MessageBox.Show("Contraseña actualizada exitosamente.","",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            passwordQueries.Get_Connection().Close();
 
+            txBx_Password.Enabled = false;
+        }
+        txBx_Password.Enabled = true;
+    }
+    private void btn_deleteAcc_Click(object sender, EventArgs e)
+    {
+        bool confirm = MessageBox.Show("¿Estás seguro de que deseas eliminar tu cuenta? Esta acción no se puede deshacer.", 
+            "Confirme su acción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes;
+        if (confirm)
+        {
+            SqlQueries deleteQueries = new SqlQueries(_connectionString);
+            
+            //delete foreign key constraint
+            string cmd = $"DELETE FROM asesorias WHERE idAlumno = '{lbl_matr.Text}';";
+            deleteQueries.GetCommand_and_ExecuteNonQuery(cmd);
+            
+            cmd = $"DELETE FROM alumnos WHERE matricula = '{lbl_matr.Text}';";
+            deleteQueries.GetCommand_and_ExecuteNonQuery(cmd);        
+            
+            MessageBox.Show("Cuenta eliminada exitosamente.");
+            
+            deleteQueries.Get_Connection().Close();
+            this.Close();
+        }
+    }
+    
+    private void btn_unsignClub_Click(object sender, EventArgs e)
+    {
+        bool confirm = MessageBox.Show($"¿Dar de baja del club {txBx_ClubSigned.Text}", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+
+        if (confirm)
+        {
+            SqlQueries unsignclubQueries = new SqlQueries(_connectionString);
+            string cmd = $"UPDATE alumnos SET club_pertenece = NULL WHERE matricula = '{lbl_matr.Text}'";
+            unsignclubQueries.GetCommand_and_ExecuteNonQuery(cmd);
+            
+            MessageBox.Show("Dado de baja del club exitosamente.");
+            
+            unsignclubQueries.Get_Connection().Close();
+        }
+    }
+    
     //termina tab configuracion
+    
 }

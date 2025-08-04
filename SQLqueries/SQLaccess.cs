@@ -45,12 +45,5 @@ public class SqlQueries
         return cmd.ExecuteReader();
     }
     
-    public DataTable Execute_Data_Table(string commandText)
-    {
-        MySqlCommand cmd = Get_Command(commandText);
-        MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-        DataTable dataTable = new DataTable();
-        adapter.Fill(dataTable);
-        return dataTable;
-    }
+    
 }

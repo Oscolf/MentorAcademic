@@ -31,7 +31,7 @@
             btn_back = new System.Windows.Forms.Button();
             btn_signUp = new System.Windows.Forms.Button();
             tbx_correo = new System.Windows.Forms.TextBox();
-            tbx_contraseña = new System.Windows.Forms.TextBox();
+            tBx_password = new System.Windows.Forms.TextBox();
             tbx_nombre = new System.Windows.Forms.TextBox();
             tbx_apellidos = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
@@ -40,6 +40,7 @@
             lbl_apellidos = new System.Windows.Forms.Label();
             lbl_password = new System.Windows.Forms.Label();
             lbl_correo = new System.Windows.Forms.Label();
+            btn_verContrasena = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // btn_back
@@ -82,17 +83,17 @@
             tbx_correo.TabIndex = 3;
             tbx_correo.TextChanged += tbx_TextChanged;
             // 
-            // tbx_contraseña
+            // tBx_password
             // 
-            tbx_contraseña.BackColor = System.Drawing.Color.FromArgb(((int)((byte)142)), ((int)((byte)182)), ((int)((byte)155)));
-            tbx_contraseña.Font = new System.Drawing.Font("Segoe UI", 14F);
-            tbx_contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
-            tbx_contraseña.Location = new System.Drawing.Point(89, 445);
-            tbx_contraseña.Name = "tbx_contraseña";
-            tbx_contraseña.Size = new System.Drawing.Size(421, 45);
-            tbx_contraseña.TabIndex = 2;
-            tbx_contraseña.UseSystemPasswordChar = true;
-            tbx_contraseña.TextChanged += tbx_TextChanged;
+            tBx_password.BackColor = System.Drawing.Color.FromArgb(((int)((byte)142)), ((int)((byte)182)), ((int)((byte)155)));
+            tBx_password.Font = new System.Drawing.Font("Segoe UI", 14F);
+            tBx_password.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
+            tBx_password.Location = new System.Drawing.Point(89, 445);
+            tBx_password.Name = "tBx_password";
+            tBx_password.Size = new System.Drawing.Size(421, 45);
+            tBx_password.TabIndex = 2;
+            tBx_password.UseSystemPasswordChar = true;
+            tBx_password.TextChanged += tbx_TextChanged;
             // 
             // tbx_nombre
             // 
@@ -174,6 +175,21 @@
             lbl_correo.TabIndex = 11;
             lbl_correo.Text = "Correo";
             // 
+            // btn_verContrasena
+            // 
+            btn_verContrasena.BackColor = System.Drawing.Color.FromArgb(((int)((byte)142)), ((int)((byte)182)), ((int)((byte)155)));
+            btn_verContrasena.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            btn_verContrasena.Enabled = false;
+            btn_verContrasena.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btn_verContrasena.Font = new System.Drawing.Font("Segoe UI Semilight", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+            btn_verContrasena.Location = new System.Drawing.Point(333, 399);
+            btn_verContrasena.Name = "btn_verContrasena";
+            btn_verContrasena.Size = new System.Drawing.Size(177, 40);
+            btn_verContrasena.TabIndex = 12;
+            btn_verContrasena.Text = "Ver Contraseña";
+            btn_verContrasena.UseVisualStyleBackColor = false;
+            btn_verContrasena.Click += button1_Click;
+            // 
             // SignUp
             // 
             AcceptButton = btn_signUp;
@@ -182,6 +198,7 @@
             BackColor = System.Drawing.Color.FromArgb(((int)((byte)35)), ((int)((byte)83)), ((int)((byte)71)));
             CancelButton = btn_back;
             ClientSize = new System.Drawing.Size(1115, 728);
+            Controls.Add(btn_verContrasena);
             Controls.Add(lbl_correo);
             Controls.Add(lbl_password);
             Controls.Add(lbl_apellidos);
@@ -190,7 +207,7 @@
             Controls.Add(label1);
             Controls.Add(tbx_apellidos);
             Controls.Add(tbx_nombre);
-            Controls.Add(tbx_contraseña);
+            Controls.Add(tBx_password);
             Controls.Add(tbx_correo);
             Controls.Add(btn_signUp);
             Controls.Add(btn_back);
@@ -200,6 +217,8 @@
             ResumeLayout(false);
             PerformLayout();
         }
+
+        private System.Windows.Forms.Button btn_verContrasena;
 
         private System.Windows.Forms.Label lbl_password;
         private System.Windows.Forms.Label lbl_correo;
@@ -212,7 +231,7 @@
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_signUp;
         private System.Windows.Forms.TextBox tbx_correo;
-        private System.Windows.Forms.TextBox tbx_contraseña;
+        private System.Windows.Forms.TextBox tBx_password;
         private System.Windows.Forms.TextBox tbx_nombre;
         private System.Windows.Forms.TextBox tbx_apellidos;
         private System.Windows.Forms.Label label1;

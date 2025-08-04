@@ -12,7 +12,6 @@ public class User
     private string _fullName;
     
     public User() { }
-
     public User(string nombre, string apellido, string email, string password)
     {
         Nombre = nombre;
@@ -42,7 +41,6 @@ public class User
                 _email = value;
                 Matricula = value; // Matricula es derivado del email
             }
-
         }
     }
     public string Matricula
@@ -90,7 +88,7 @@ public class User
             NombreCompleto = ValidateNaNFullName();
         }
     }
-    public  string NombreCompleto
+    public string NombreCompleto
     {
         get { return _fullName; }
         set {_fullName = value; }
@@ -141,7 +139,6 @@ public class User
         signUpQueries.GetCommand_and_ExecuteNonQuery(cmd);
         return true;
     }
-
     public bool ValidateLogin()
     {
         SqlQueries loginQueries =  new SqlQueries("server=127.0.0.1;" +
@@ -190,3 +187,5 @@ public class User
         return name;
     }
 }
+
+

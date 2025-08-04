@@ -14,20 +14,25 @@ namespace WinFormsMentorAcademic
 
         private void btn_signUp_Click(object sender, EventArgs e)
         {
-            User usuario = new User(tbx_nombre.Text, tbx_apellidos.Text, tbx_correo.Text, tbx_contraseña.Text);
+            User usuario = new User(tbx_nombre.Text, tbx_apellidos.Text, tbx_correo.Text, tBx_password.Text);
             if (usuario.ValidateSignUp())
             {
-                MainMenu principal = new MainMenu(usuario);
-                principal.Show();
+                MainMenu menuPrincipal = new MainMenu(usuario);
+                menuPrincipal.Show();
                 this.Hide();
             }
         }
         private void tbx_TextChanged(object sender, EventArgs e)
         {
-            if (tbx_nombre.Text != "" && tbx_contraseña.Text != "" && tbx_apellidos.Text != "" && tbx_correo.Text != "")
+            if (tbx_nombre.Text != "" && tBx_password.Text != "" && tbx_apellidos.Text != "" && tbx_correo.Text != "")
                 btn_signUp.Enabled = true;
             else
                 btn_signUp.Enabled = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tBx_password.UseSystemPasswordChar = !tBx_password.UseSystemPasswordChar;
         }
     }
 }

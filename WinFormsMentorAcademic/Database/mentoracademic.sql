@@ -1,4 +1,5 @@
 -- Crear base de datos y usarla
+
 drop database if exists mentoracademic;
 create database mentoracademic;
 use mentoracademic;
@@ -68,6 +69,7 @@ CREATE TABLE encargadosclubes
     apellido    varchar(50)  NOT NULL,
     email       varchar(100) NOT NULL UNIQUE
 ); 
+
 -- Agregar llaves foráneas
 
 ALTER TABLE alumnos

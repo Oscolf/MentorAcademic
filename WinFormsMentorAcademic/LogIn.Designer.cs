@@ -38,6 +38,7 @@ partial class LogIn
         lnkLbl_createAcc = new System.Windows.Forms.LinkLabel();
         btn_back = new System.Windows.Forms.Button();
         label1 = new System.Windows.Forms.Label();
+        btn_verContrasena = new System.Windows.Forms.Button();
         SuspendLayout();
         // 
         // lbl_email
@@ -95,7 +96,7 @@ partial class LogIn
         btn_login.Enabled = false;
         btn_login.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btn_login.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
-        btn_login.Location = new System.Drawing.Point(427, 434);
+        btn_login.Location = new System.Drawing.Point(419, 434);
         btn_login.Name = "btn_login";
         btn_login.Size = new System.Drawing.Size(218, 86);
         btn_login.TabIndex = 4;
@@ -107,7 +108,7 @@ partial class LogIn
         // 
         lbl_noAcc.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lbl_noAcc.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
-        lbl_noAcc.Location = new System.Drawing.Point(364, 358);
+        lbl_noAcc.Location = new System.Drawing.Point(364, 387);
         lbl_noAcc.Name = "lbl_noAcc";
         lbl_noAcc.Size = new System.Drawing.Size(196, 34);
         lbl_noAcc.TabIndex = 5;
@@ -119,7 +120,7 @@ partial class LogIn
         lnkLbl_createAcc.Cursor = System.Windows.Forms.Cursors.Hand;
         lnkLbl_createAcc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         lnkLbl_createAcc.LinkColor = System.Drawing.Color.FromArgb(((int)((byte)142)), ((int)((byte)182)), ((int)((byte)155)));
-        lnkLbl_createAcc.Location = new System.Drawing.Point(550, 358);
+        lnkLbl_createAcc.Location = new System.Drawing.Point(550, 387);
         lnkLbl_createAcc.Name = "lnkLbl_createAcc";
         lnkLbl_createAcc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
         lnkLbl_createAcc.Size = new System.Drawing.Size(124, 34);
@@ -153,6 +154,21 @@ partial class LogIn
         label1.TabIndex = 8;
         label1.Text = "Inicia sesión";
         // 
+        // btn_verContrasena
+        // 
+        btn_verContrasena.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+        btn_verContrasena.BackColor = System.Drawing.Color.FromArgb(((int)((byte)142)), ((int)((byte)182)), ((int)((byte)155)));
+        btn_verContrasena.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+        btn_verContrasena.Font = new System.Drawing.Font("Segoe UI Semilight", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btn_verContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
+        btn_verContrasena.Location = new System.Drawing.Point(691, 288);
+        btn_verContrasena.Name = "btn_verContrasena";
+        btn_verContrasena.Size = new System.Drawing.Size(122, 75);
+        btn_verContrasena.TabIndex = 9;
+        btn_verContrasena.Text = "Mostrar contraseña";
+        btn_verContrasena.UseVisualStyleBackColor = false;
+        btn_verContrasena.Click += btn_verContrasena_Click;
+        // 
         // LogIn
         // 
         AcceptButton = btn_login;
@@ -161,6 +177,7 @@ partial class LogIn
         BackColor = System.Drawing.Color.FromArgb(((int)((byte)35)), ((int)((byte)83)), ((int)((byte)71)));
         CancelButton = btn_back;
         ClientSize = new System.Drawing.Size(1031, 602);
+        Controls.Add(btn_verContrasena);
         Controls.Add(label1);
         Controls.Add(btn_back);
         Controls.Add(lnkLbl_createAcc);
@@ -176,6 +193,8 @@ partial class LogIn
         ResumeLayout(false);
         PerformLayout();
     }
+
+    private System.Windows.Forms.Button btn_verContrasena;
 
     private System.Windows.Forms.Label label1;
 

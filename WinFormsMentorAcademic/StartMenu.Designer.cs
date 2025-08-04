@@ -44,6 +44,7 @@ partial class StartMenu
         tbPg_noticias = new System.Windows.Forms.TabPage();
         tbPg_comunicados = new System.Windows.Forms.TabPage();
         btn_signup = new System.Windows.Forms.Button();
+        label1 = new System.Windows.Forms.Label();
         grBx_RedesSociales.SuspendLayout();
         gBx_noticiasComunicados.SuspendLayout();
         tbCtrl_noticiasOcomunicados.SuspendLayout();
@@ -123,6 +124,7 @@ partial class StartMenu
         // 
         // vScBr_redesSociales
         // 
+        vScBr_redesSociales.Cursor = System.Windows.Forms.Cursors.Hand;
         vScBr_redesSociales.Dock = System.Windows.Forms.DockStyle.Right;
         vScBr_redesSociales.Location = new System.Drawing.Point(502, 46);
         vScBr_redesSociales.Name = "vScBr_redesSociales";
@@ -137,9 +139,9 @@ partial class StartMenu
         btn_login.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
         btn_login.Location = new System.Drawing.Point(949, 28);
         btn_login.Name = "btn_login";
-        btn_login.Size = new System.Drawing.Size(261, 69);
+        btn_login.Size = new System.Drawing.Size(261, 54);
         btn_login.TabIndex = 2;
-        btn_login.Text = "Ingresar";
+        btn_login.Text = "Iniciar Sesión";
         btn_login.UseVisualStyleBackColor = false;
         btn_login.Click += btn_login_Click;
         // 
@@ -192,13 +194,24 @@ partial class StartMenu
         btn_signup.BackColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
         btn_signup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btn_signup.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)22)), ((int)((byte)56)), ((int)((byte)50)));
-        btn_signup.Location = new System.Drawing.Point(949, 103);
+        btn_signup.Location = new System.Drawing.Point(952, 118);
         btn_signup.Name = "btn_signup";
-        btn_signup.Size = new System.Drawing.Size(261, 69);
+        btn_signup.Size = new System.Drawing.Size(261, 54);
         btn_signup.TabIndex = 5;
         btn_signup.Text = "Registrarse";
         btn_signup.UseVisualStyleBackColor = false;
         btn_signup.Click += btn_signup_Click;
+        // 
+        // label1
+        // 
+        label1.BackColor = System.Drawing.Color.Transparent;
+        label1.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label1.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)218)), ((int)((byte)241)), ((int)((byte)222)));
+        label1.Location = new System.Drawing.Point(1016, 85);
+        label1.Name = "label1";
+        label1.Size = new System.Drawing.Size(136, 30);
+        label1.TabIndex = 6;
+        label1.Text = "¿Eres nuev@?";
         // 
         // StartMenu
         // 
@@ -206,6 +219,7 @@ partial class StartMenu
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.FromArgb(((int)((byte)35)), ((int)((byte)83)), ((int)((byte)71)));
         ClientSize = new System.Drawing.Size(1256, 771);
+        Controls.Add(label1);
         Controls.Add(btn_signup);
         Controls.Add(grBx_RedesSociales);
         Controls.Add(gBx_noticiasComunicados);
@@ -218,6 +232,8 @@ partial class StartMenu
         ResumeLayout(false);
         PerformLayout();
     }
+
+    private System.Windows.Forms.Label label1;
 
     private System.Windows.Forms.Button btn_signup;
 
