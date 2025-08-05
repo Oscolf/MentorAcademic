@@ -30,7 +30,7 @@ namespace WinFormsMentorAcademic
                 btn_signUp.Enabled = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_verContrasena_Click(object sender, EventArgs e)
         {
             tBx_password.UseSystemPasswordChar = !tBx_password.UseSystemPasswordChar;
         }

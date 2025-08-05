@@ -90,7 +90,7 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos";
             // 
-            // lbl_date
+            // lbl_Confirmdate
             // 
             lbl_Confirmdate.AutoSize = true;
             lbl_Confirmdate.Location = new System.Drawing.Point(118, 178);
@@ -221,6 +221,7 @@
             btn_back.TabIndex = 0;
             btn_back.Text = "Regresar";
             btn_back.UseVisualStyleBackColor = false;
+            btn_back.Click += btn_back_Click;
             // 
             // lbl_ConfirmarMatrText
             // 

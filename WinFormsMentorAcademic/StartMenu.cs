@@ -38,4 +38,9 @@ public partial class StartMenu : Form
         
         btn_twitter.Location = punto;
     }
+
+    private void btn_facebook_Click(object sender, EventArgs e)
+    {
+        throw new System.NotImplementedException();
+    }
 }

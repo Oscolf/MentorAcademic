@@ -179,7 +179,6 @@
             // 
             btn_verContrasena.BackColor = System.Drawing.Color.FromArgb(((int)((byte)142)), ((int)((byte)182)), ((int)((byte)155)));
             btn_verContrasena.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            btn_verContrasena.Enabled = false;
             btn_verContrasena.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             btn_verContrasena.Font = new System.Drawing.Font("Segoe UI Semilight", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
             btn_verContrasena.Location = new System.Drawing.Point(333, 399);
@@ -188,7 +187,7 @@
             btn_verContrasena.TabIndex = 12;
             btn_verContrasena.Text = "Ver Contraseña";
             btn_verContrasena.UseVisualStyleBackColor = false;
-            btn_verContrasena.Click += button1_Click;
+            btn_verContrasena.Click += btn_verContrasena_Click;
             // 
             // SignUp
             // 

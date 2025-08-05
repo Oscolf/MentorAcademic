@@ -108,6 +108,8 @@ public class User
         }
     }
     
+    private string _connectionString = "server=localhost;port=3306;database=mentoracademic;uid=root;sslmode=none;";
+    
     public bool ValidateSignUp()
     {
         if (_fullName == "INVALID")
@@ -127,25 +129,18 @@ public class User
             return false;
         }
         
-        SqlQueries signUpQueries = new SqlQueries("server=localhost;" +
-                                                  "port=3306;" +
-                                                  "database=mentoracademic;" +
-                                                  "uid=root;" +
-                                                  "sslmode=none;");
+        SqlQueries signUpQueries = new SqlQueries(_connectionString);
         
         string cmd = $"INSERT INTO alumnos (nombre, apellido, email, contasena, matricula) " +
                      $"VALUES ('{Nombre}', '{Apellido}', '{Email}', '{Password}', '{Matricula}');";
         
         signUpQueries.GetCommand_and_ExecuteNonQuery(cmd);
+        
         return true;
     }
     public bool ValidateLogin()
     {
-        SqlQueries loginQueries =  new SqlQueries("server=127.0.0.1;" +
-                                                  "port=3306;" +
-                                                  "database=mentoracademic;" +
-                                                  "uid=root;" +
-                                                  "sslmode=none;");
+        SqlQueries loginQueries =  new SqlQueries(_connectionString);
         
         string cmd = $"SELECT * FROM alumnos WHERE email = '{Email}' AND contasena = '{Password}';";
         
@@ -159,15 +154,15 @@ public class User
             Password = reader[4].ToString();
             
             MessageBox.Show($"Bienvenid@ {reader[1]}!");
+            return true;
         }
-        else
-        {
-            MessageBox.Show("Usuario o contraseña incorrectos o inexistentes. Por favor, inténtelo de nuevo.");
-            reader.Close();
-            loginQueries.Get_Connection().Close();
-            return false;
-        }
-        return true;
+        
+        MessageBox.Show("Usuario o contraseña incorrectos o inexistentes. Por favor, inténtelo de nuevo.");
+        
+        reader.Close();
+        loginQueries.Get_Connection().Close();
+        
+        return false;
     }
     private string ValidateNaNFullName()
     {

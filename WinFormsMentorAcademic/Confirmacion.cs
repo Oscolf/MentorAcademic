@@ -24,11 +24,17 @@ public partial class Confirmacion : Form
         
         string cmd = $"INSERT INTO asesorias (idProfesor, idAlumno, hora, fecha, estado) " +
                      $"VALUES ('{lbl_ConfirmProfID.Text}','{lbl_ConfirmarMatr.Text}', '{lbl_ConfirmHorainicio.Text}', '{lbl_Confirmdate.Text}', 'Pendiente');";
+        
         asesoriaQueries.GetCommand_and_ExecuteNonQuery(cmd);
         
         MessageBox.Show("Asesoría reservada exitosamente.");
         
         asesoriaQueries.Get_Connection().Close();
+        this.Close();
+    }
+
+    private void btn_back_Click(object sender, EventArgs e)
+    {
         this.Close();
     }
 }

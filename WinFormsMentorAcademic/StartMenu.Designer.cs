@@ -121,6 +121,7 @@ partial class StartMenu
         btn_facebook.TabIndex = 1;
         btn_facebook.Text = "Facebook";
         btn_facebook.UseVisualStyleBackColor = false;
+        btn_facebook.Click += btn_facebook_Click;
         // 
         // vScBr_redesSociales
         // 

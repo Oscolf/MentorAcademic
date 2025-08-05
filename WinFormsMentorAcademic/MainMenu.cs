@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Diagnostics;
+using MySql.Data.MySqlClient;
 using SQLqueries;
 namespace WinFormsMentorAcademic;
 public partial class MainMenu : Form
@@ -132,11 +133,11 @@ public partial class MainMenu : Form
     }
     private void ltBx_profesores_SelectedIndexChanged(object sender, EventArgs e)
     {
-
         ltBx_horarios.Items.Clear();
 
         SqlQueries selHorarioQueries = new SqlQueries(_connectionString);
-        string cmd = "SELECT horarios.dia, horarios.hora_inicio, horarios.hora_fin " +
+        
+        string cmd = "SELECT horarios.hora_inicio, horarios.hora_fin " +
                      "FROM profesores JOIN horarios ON profesores.idProfesor = horarios.idProfesor " +
                      $"WHERE profesores.idProfesor = '{_profIDs[ltBx_profesores.SelectedIndex]}';";
 
@@ -144,7 +145,7 @@ public partial class MainMenu : Form
 
         while (reader.Read())
         {
-            ltBx_horarios.Items.Add($"{reader["dia"]} {reader["hora_inicio"]} - {reader["hora_fin"]}");
+            ltBx_horarios.Items.Add($"{reader["hora_inicio"]} - {reader["hora_fin"]}");
             _horarios.Add(reader["hora_inicio"].ToString());
         }
 
@@ -157,11 +158,12 @@ public partial class MainMenu : Form
         string materia = cmBx_Course.SelectedItem.ToString();
         string horario = ltBx_horarios.SelectedItem.ToString();
         string dia = dateTP_asesoria.Value.ToString("yy-MM-dd");
+        
         string horaInicio = _horarios[ltBx_horarios.SelectedIndex]; 
         int profID = _profIDs[ltBx_profesores.SelectedIndex];
 
         Confirmacion confirmacion = 
-            new Confirmacion(profe, materia, horario,dia, horaInicio, lbl_matr.Text, profID);
+            new Confirmacion(profe, materia, horario, dia, horaInicio, lbl_matr.Text, profID);
         
         confirmacion.Show();
     }
@@ -269,20 +271,6 @@ public partial class MainMenu : Form
         ritmosLatinos.Show();
     }
 
-    private void btn_regresarClubes_Click(object sender, EventArgs e)
-    {
-        tabControl.SelectedIndex = 0;
-
-        btn_asesorias.Visible = true; btn_clubes.Visible = true;
-        lbl_asesorias.Visible = true; lbl_clubes.Visible = true;
-
-        btn_culturales.Visible = false; btn_culturales.Enabled = false;
-        btn_deportivos.Visible = false; btn_deportivos.Enabled = false;
-
-        lbl_welcome.Text = $"Bienvenid@ {lbl_name.Text}\n Seleccione el servicio que desea utilizar";
-    }
-
-
     //termina tab clubes culturales
 
     //empieza tab configuracion
@@ -298,6 +286,7 @@ public partial class MainMenu : Form
             SqlQueries passwordQueries = new SqlQueries(_connectionString);
 
             string cmd = $"UPDATE alumnos SET contasena = '{txBx_Password.Text}' WHERE matricula = '{lbl_matr.Text}';";
+            
             passwordQueries.GetCommand_and_ExecuteNonQuery(cmd);
 
             MessageBox.Show("Contraseña actualizada exitosamente.","",MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -315,7 +304,7 @@ public partial class MainMenu : Form
         {
             SqlQueries deleteQueries = new SqlQueries(_connectionString);
             
-            //delete foreign key constraint
+            //borrar la relación de asesorías y el alumno (evitar errores de llave foránea)
             string cmd = $"DELETE FROM asesorias WHERE idAlumno = '{lbl_matr.Text}';";
             deleteQueries.GetCommand_and_ExecuteNonQuery(cmd);
             
@@ -331,7 +320,7 @@ public partial class MainMenu : Form
     
     private void btn_unsignClub_Click(object sender, EventArgs e)
     {
-        bool confirm = MessageBox.Show($"¿Dar de baja del club {txBx_ClubSigned.Text}", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+        bool confirm = MessageBox.Show($"¿Dar de baja del club {txBx_ClubSigned.Text}?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
 
         if (confirm)
         {

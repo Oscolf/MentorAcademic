@@ -11,6 +11,7 @@ public partial class ConfirmacionClubes : Form
         lbl_clubSel.Text += clubName;
         lbl_clubID.Text = clubId.ToString();
     }
+    
     private readonly string _connectionString = "server=localhost;port=3306;user=root;database=mentoracademic;sslmode=none;";
     private void btn_send_Click(object sender, EventArgs e)
     {
